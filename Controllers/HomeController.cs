@@ -2,31 +2,15 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using MSNiknam.Models;
 
-namespace MSNiknam.Controllers
+namespace MSNiknam.Controllers;
+
+public sealed class HomeController : Controller
 {
-    public class HomeController : Controller
+    public IActionResult Index() => View();
+
+    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    public IActionResult Error() => View(new ErrorViewModel
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-    }
+        RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
+    });
 }

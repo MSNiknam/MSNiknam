@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Nav_Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Nav_About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Nav_Resume" xml:space="preserve">
+    <value>Resume</value>
+  </data>
+  <data name="Nav_Projects" xml:space="preserve">
+    <value>Projects</value>
+  </data>
+  <data name="Nav_Services" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="Nav_Blog" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="Nav_Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="Header_MainNavigation" xml:space="preserve">
+    <value>Main navigation</value>
+  </data>
+  <data name="Header_MobileNavigation" xml:space="preserve">
+    <value>Mobile navigation</value>
+  </data>
+  <data name="Header_Language" xml:space="preserve">
+    <value>Choose language</value>
+  </data>
+  <data name="Header_Theme" xml:space="preserve">
+    <value>Switch theme</value>
+  </data>
+  <data name="Header_OpenMenu" xml:space="preserve">
+    <value>Open navigation</value>
+  </data>
+  <data name="Header_CloseMenu" xml:space="preserve">
+    <value>Close navigation</value>
+  </data>
+  <data name="Header_HomeLabel" xml:space="preserve">
+    <value>MSNiknam home</value>
+  </data>
+  <data name="Language_English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Language_Persian" xml:space="preserve">
+    <value>فارسی</value>
+  </data>
+  <data name="Page_Home_Title" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Hero_Kicker" xml:space="preserve">
+    <value>HELLO, I'M</value>
+  </data>
+  <data name="Hero_Title" xml:space="preserve">
+    <value>Mohammadsaleh Niknam</value>
+  </data>
+  <data name="Hero_Role" xml:space="preserve">
+    <value>Full-stack Web Developer</value>
+  </data>
+  <data name="Hero_Description" xml:space="preserve">
+    <value>I build modern, fast and maintainable web applications with a focus on clean implementation and user experience.</value>
+  </data>
+  <data name="Hero_PrimaryAction" xml:space="preserve">
+    <value>View Projects</value>
+  </data>
+  <data name="Hero_SecondaryAction" xml:space="preserve">
+    <value>Contact Me</value>
+  </data>
+  <data name="Hero_LogoAlt" xml:space="preserve">
+    <value>MSNiknam circle logo</value>
+  </data>
+  <data name="SelectedProject_Kicker" xml:space="preserve">
+    <value>PORTFOLIO</value>
+  </data>
+  <data name="SelectedProject_SectionTitle" xml:space="preserve">
+    <value>Selected Projects</value>
+  </data>
+  <data name="SelectedProject_ViewAll" xml:space="preserve">
+    <value>View All Projects</value>
+  </data>
+  <data name="SelectedProject_Type" xml:space="preserve">
+    <value>Bilingual Website</value>
+  </data>
+  <data name="SelectedProject_Name" xml:space="preserve">
+    <value>Ziggurat</value>
+  </data>
+  <data name="SelectedProject_Description" xml:space="preserve">
+    <value>A bilingual ASP.NET Core MVC website with an admin panel, project and product content management, editable translations, and SQL Server.</value>
+  </data>
+  <data name="SelectedProject_TechnologiesLabel" xml:space="preserve">
+    <value>Technologies used in the project</value>
+  </data>
+  <data name="SelectedProject_ViewProject" xml:space="preserve">
+    <value>View Project</value>
+  </data>
+  <data name="SelectedProject_RoleLabel" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="SelectedProject_RoleValue" xml:space="preserve">
+    <value>Full-stack Development</value>
+  </data>
+  <data name="SelectedProject_PlatformLabel" xml:space="preserve">
+    <value>Platform</value>
+  </data>
+  <data name="SelectedProject_PlatformValue" xml:space="preserve">
+    <value>.NET 8 / MVC</value>
+  </data>
+  <data name="SelectedProject_LanguageLabel" xml:space="preserve">
+    <value>Languages</value>
+  </data>
+  <data name="SelectedProject_LanguageValue" xml:space="preserve">
+    <value>Persian / English</value>
+  </data>
+  <data name="SelectedProject_FocusLabel" xml:space="preserve">
+    <value>Focus</value>
+  </data>
+  <data name="SelectedProject_FocusValue" xml:space="preserve">
+    <value>Content Management &amp; Localization</value>
+  </data>
+  <data name="SelectedProject_ToggleLabel" xml:space="preserve">
+    <value>Show Ziggurat project details</value>
+  </data>
+  <data name="SelectedProject_Live" xml:space="preserve">
+    <value>Live</value>
+  </data>
+  <data name="SelectedProject_PreviewAlt" xml:space="preserve">
+    <value>Temporary preview of the Ziggurat website</value>
+  </data>
+  <data name="SelectedProject_Lead" xml:space="preserve">
+    <value>LIVE PRODUCTION PROJECT</value>
+  </data>
+  <data name="SelectedProject_Subtitle" xml:space="preserve">
+    <value>A bilingual business platform focused on content management, clean structure, and solid user experience</value>
+  </data>
+  <data name="Projects_Demo" xml:space="preserve">
+    <value>Demo</value>
+  </data>
+  <data name="Projects_DemoButton" xml:space="preserve">
+    <value>View Demo</value>
+  </data>
+  <data name="Projects_PreviewAlt" xml:space="preserve">
+    <value>Temporary preview of {0}</value>
+  </data>
+  <data name="Projects_ToggleLabel" xml:space="preserve">
+    <value>Show details for {0}</value>
+  </data>
+  <data name="Project02_Type" xml:space="preserve">
+    <value>E-commerce</value>
+  </data>
+  <data name="Project02_Lead" xml:space="preserve">
+    <value>DIGITAL STORE CONCEPT</value>
+  </data>
+  <data name="Project02_Subtitle" xml:space="preserve">
+    <value>A minimal shopping experience focused on speed, products, and a simple checkout flow</value>
+  </data>
+  <data name="Project02_Description" xml:space="preserve">
+    <value>A temporary bilingual e-commerce concept with product structure, categories, search, and a fast, straightforward customer experience.</value>
+  </data>
+  <data name="Project03_Type" xml:space="preserve">
+    <value>Management Dashboard</value>
+  </data>
+  <data name="Project03_Lead" xml:space="preserve">
+    <value>BUSINESS DASHBOARD CONCEPT</value>
+  </data>
+  <data name="Project03_Subtitle" xml:space="preserve">
+    <value>A focused dashboard for customers, activities, and day-to-day reporting</value>
+  </data>
+  <data name="Project03_Description" xml:space="preserve">
+    <value>A temporary management interface concept for business data, customer management, activity tracking, and practical reporting.</value>
+  </data>
+  <data name="Project04_Type" xml:space="preserve">
+    <value>Creative Studio Website</value>
+  </data>
+  <data name="Project04_Lead" xml:space="preserve">
+    <value>CREATIVE WEBSITE CONCEPT</value>
+  </data>
+  <data name="Project04_Subtitle" xml:space="preserve">
+    <value>A minimal visual experience for presenting services, work, and a creative studio identity</value>
+  </data>
+  <data name="Project04_Description" xml:space="preserve">
+    <value>A temporary studio website concept focused on projects, services, visual identity, and a clear path for prospective clients to get in touch.</value>
+  </data>
+  <data name="Project05_Type" xml:space="preserve">
+    <value>Enterprise System</value>
+  </data>
+  <data name="Project05_Lead" xml:space="preserve">
+    <value>OPERATIONS SYSTEM CONCEPT</value>
+  </data>
+  <data name="Project05_Subtitle" xml:space="preserve">
+    <value>A modular structure for managing processes, information, and internal operations</value>
+  </data>
+  <data name="Project05_Description" xml:space="preserve">
+    <value>A temporary enterprise system concept for managing information, workflows, reports, and operational areas in a unified interface.</value>
+  </data>
+  <data name="Project06_Type" xml:space="preserve">
+    <value>Learning Platform</value>
+  </data>
+  <data name="Project06_Lead" xml:space="preserve">
+    <value>LEARNING EXPERIENCE CONCEPT</value>
+  </data>
+  <data name="Project06_Subtitle" xml:space="preserve">
+    <value>A clear platform for courses, content, learning paths, and student management</value>
+  </data>
+  <data name="Project06_Description" xml:space="preserve">
+    <value>A temporary learning platform concept for courses, content, users, and structured learning paths with a clean and extensible interface.</value>
+  </data>
+  <data name="ServicesPreview_Kicker" xml:space="preserve">
+    <value>WHAT I DO</value>
+  </data>
+  <data name="ServicesPreview_Title" xml:space="preserve">
+    <value>From technical foundation to delivered web product</value>
+  </data>
+  <data name="ServicesPreview_Description" xml:space="preserve">
+    <value>I work across the full web-development lifecycle, from backend logic and database design to interface implementation and production deployment.</value>
+  </data>
+  <data name="ServicesPreview_ViewAll" xml:space="preserve">
+    <value>View All Services</value>
+  </data>
+  <data name="Service01_Title" xml:space="preserve">
+    <value>Full-stack Web Development</value>
+  </data>
+  <data name="Service01_Description" xml:space="preserve">
+    <value>Building websites and web applications with clean structure, responsive interfaces, and a reliable connection between frontend and backend.</value>
+  </data>
+  <data name="Service02_Title" xml:space="preserve">
+    <value>Backend &amp; API Development</value>
+  </data>
+  <data name="Service02_Description" xml:space="preserve">
+    <value>Designing server-side logic with ASP.NET Core, APIs, maintainable architecture, and a strong focus on security and reliability.</value>
+  </data>
+  <data name="Service03_Title" xml:space="preserve">
+    <value>Database Design</value>
+  </data>
+  <data name="Service03_Description" xml:space="preserve">
+    <value>Designing data models, relationships, and data-access layers with SQL Server and EF Core for clear and extensible systems.</value>
+  </data>
+  <data name="Service04_Title" xml:space="preserve">
+    <value>Deployment &amp; Delivery</value>
+  </data>
+  <data name="Service04_Description" xml:space="preserve">
+    <value>Preparing and deploying applications to Windows Server and IIS, configuring runtime environments, and delivering stable production builds.</value>
+  </data>
+  <data name="AboutPreview_Kicker" xml:space="preserve">
+    <value>ABOUT ME</value>
+  </data>
+  <data name="AboutPreview_Title" xml:space="preserve">
+    <value>Web development, built to perform</value>
+  </data>
+  <data name="AboutPreview_Description" xml:space="preserve">
+    <value>Fast, secure, scalable web solutions — from architecture and backend to production deployment.</value>
+  </data>
+  <data name="AboutPreview_Action" xml:space="preserve">
+    <value>More About Me</value>
+  </data>
+  <data name="AboutPreview_FocusLabel" xml:space="preserve">
+    <value>Focus</value>
+  </data>
+  <data name="AboutPreview_FocusValue" xml:space="preserve">
+    <value>Web Development &amp; Backend Architecture</value>
+  </data>
+  <data name="AboutPreview_StackLabel" xml:space="preserve">
+    <value>Core Stack</value>
+  </data>
+  <data name="AboutPreview_StackValue" xml:space="preserve">
+    <value>ASP.NET Core, EF Core &amp; SQL Server</value>
+  </data>
+  <data name="AboutPreview_ApproachLabel" xml:space="preserve">
+    <value>Approach</value>
+  </data>
+  <data name="AboutPreview_ApproachValue" xml:space="preserve">
+    <value>Clean structure, simplicity, and maintainability</value>
+  </data>
+  <data name="ArticlesPreview_Kicker" xml:space="preserve">
+    <value>ARTICLES</value>
+  </data>
+  <data name="ArticlesPreview_Title" xml:space="preserve">
+    <value>Technical notes and development experience</value>
+  </data>
+  <data name="ArticlesPreview_Description" xml:space="preserve">
+    <value>Short, practical writing on web development, architecture, and deployment.</value>
+  </data>
+  <data name="ArticlesPreview_ViewAll" xml:space="preserve">
+    <value>View All Articles</value>
+  </data>
+  <data name="ArticlesPreview_Read" xml:space="preserve">
+    <value>Read Article</value>
+  </data>
+  <data name="Article01_Category" xml:space="preserve">
+    <value>ASP.NET Core</value>
+  </data>
+  <data name="Article01_Title" xml:space="preserve">
+    <value>Keeping ASP.NET Core projects clean</value>
+  </data>
+  <data name="Article01_Description" xml:space="preserve">
+    <value>A practical look at keeping project structure simple, maintainable, and ready to grow.</value>
+  </data>
+  <data name="Article02_Category" xml:space="preserve">
+    <value>Database</value>
+  </data>
+  <data name="Article02_Title" xml:space="preserve">
+    <value>Database design for maintainable systems</value>
+  </data>
+  <data name="Article02_Description" xml:space="preserve">
+    <value>A few practical principles for data modeling without unnecessary complexity.</value>
+  </data>
+  <data name="Article03_Category" xml:space="preserve">
+    <value>Deployment</value>
+  </data>
+  <data name="Article03_Title" xml:space="preserve">
+    <value>Deploying ASP.NET Core to IIS</value>
+  </data>
+  <data name="Article03_Description" xml:space="preserve">
+    <value>A concise overview of preparing and publishing an application to Windows Server.</value>
+  </data>
+  <data name="ContactCTA_Kicker" xml:space="preserve">
+    <value>AVAILABLE FOR WORK</value>
+  </data>
+  <data name="ContactCTA_Title" xml:space="preserve">
+    <value>Have an idea? Let's build it.</value>
+  </data>
+  <data name="ContactCTA_Description" xml:space="preserve">
+    <value>Get in touch for product development, a new web project, or improving an existing system.</value>
+  </data>
+  <data name="ContactCTA_Action" xml:space="preserve">
+    <value>Start a Conversation</value>
+  </data>
+  <data name="Footer_Tagline" xml:space="preserve">
+    <value>Web development focused on clean structure, performance, and reliable implementation.</value>
+  </data>
+  <data name="Footer_Navigation" xml:space="preserve">
+    <value>Footer navigation</value>
+  </data>
+  <data name="Footer_Privacy" xml:space="preserve">
+    <value>Privacy</value>
+  </data>
+  <data name="Footer_Rights" xml:space="preserve">
+    <value>All rights reserved.</value>
+  </data>
+  <data name="Footer_Credit" xml:space="preserve">
+    <value>Designed and developed by Mohammadsaleh Niknam</value>
+  </data>
+  <data name="Hero_Feature_WebApps" xml:space="preserve">
+    <value>Web Applications</value>
+  </data>
+  <data name="Hero_Feature_CleanArchitecture" xml:space="preserve">
+    <value>Clean Architecture</value>
+  </data>
+  <data name="Hero_Feature_Performance" xml:space="preserve">
+    <value>Performance</value>
+  </data>
+  <data name="Hero_Feature_ModernTech" xml:space="preserve">
+    <value>Modern Technologies</value>
+  </data>
+  <data name="Hero_Feature_Scalable" xml:space="preserve">
+    <value>Scalable Solutions</value>
+  </data>
+  <data name="Hero_Feature_UX" xml:space="preserve">
+    <value>User Experience</value>
+  </data>
+</root>

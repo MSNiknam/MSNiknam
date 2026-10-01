@@ -1,0 +1,497 @@
+/* =========================================================
+   MSNiknam Header — v1.1
+   Header only. English structure + language dropdown UI.
+   ========================================================= */
+
+:root {
+    --msn-accent: #3b82f6;
+    --msn-header-height: 76px;
+    --msn-header-bg: #090909;
+    --msn-header-surface: #121212;
+    --msn-header-text: #f5f5f5;
+    --msn-header-muted: #a3a3a7;
+    --msn-header-border: #2a2a2e;
+    --msn-header-inverse-bg: #f5f5f5;
+    --msn-header-inverse-text: #0b0b0c;
+}
+
+html[data-theme="light"] {
+    --msn-header-bg: #ffffff;
+    --msn-header-surface: #f5f5f5;
+    --msn-header-text: #111111;
+    --msn-header-muted: #67676c;
+    --msn-header-border: #dedee1;
+    --msn-header-inverse-bg: #111111;
+    --msn-header-inverse-text: #ffffff;
+}
+
+.msn-header {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    width: 100%;
+    background: var(--msn-header-bg);
+    border-bottom: 1px solid var(--msn-header-border);
+}
+
+.msn-navbar {
+    min-height: var(--msn-header-height);
+    padding: 0;
+}
+
+.msn-navbar > .container {
+    min-height: var(--msn-header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+}
+
+/* Brand */
+.msn-brand {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.msn-brand-logo {
+    display: block;
+    width: 128px;
+    height: auto;
+}
+
+.msn-brand-logo-dark {
+    display: none;
+}
+
+html[data-theme="light"] .msn-brand-logo-light {
+    display: none;
+}
+
+html[data-theme="light"] .msn-brand-logo-dark {
+    display: block;
+}
+
+/* Desktop navigation */
+.msn-desktop-nav {
+    gap: 0.1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.msn-header a.msn-nav-link,
+.msn-header a.msn-nav-link:visited {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 42px;
+    padding: 0.6rem 0.72rem;
+    color: var(--msn-header-text);
+    text-decoration: none;
+    font-size: 0.91rem;
+    font-weight: 500;
+    line-height: 1;
+    opacity: 0.86;
+    transition: opacity 160ms ease;
+}
+
+.msn-header a.msn-nav-link:hover,
+.msn-header a.msn-nav-link:focus-visible,
+.msn-header a.msn-nav-link.active {
+    color: var(--msn-header-text);
+    opacity: 1;
+}
+
+.msn-nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 4px;
+    width: 4px;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--msn-accent);
+    transform: translateX(-50%);
+}
+
+/* Header actions */
+.msn-header-actions {
+    flex-shrink: 0;
+    gap: 0.5rem;
+}
+
+.msn-icon-button,
+.msn-menu-button,
+.msn-header a.msn-contact-button,
+.msn-header a.msn-contact-button:visited {
+    appearance: none;
+    border: 1px solid var(--msn-header-border);
+    background: transparent;
+    color: var(--msn-header-text);
+    border-radius: 10px;
+    transition:
+        background-color 160ms ease,
+        border-color 160ms ease,
+        color 160ms ease,
+        transform 160ms ease;
+}
+
+.msn-icon-button {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.msn-header a.msn-contact-button,
+.msn-header a.msn-contact-button:visited {
+    min-height: 40px;
+    padding: 0 1rem;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.84rem;
+    font-weight: 600;
+}
+
+/* Inverse-theme hover for Header controls */
+.msn-icon-button:hover,
+.msn-icon-button:focus-visible,
+.msn-menu-button:hover,
+.msn-menu-button:focus-visible,
+.msn-header a.msn-contact-button:hover,
+.msn-header a.msn-contact-button:focus-visible,
+.msn-close-button:hover,
+.msn-close-button:focus-visible {
+    background: var(--msn-header-inverse-bg);
+    border-color: var(--msn-header-inverse-bg);
+    color: var(--msn-header-inverse-text);
+    outline: none;
+    transform: translateY(-1px);
+}
+
+/* Icons */
+.msn-action-icon,
+.msn-theme-icon {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.msn-theme-icon-sun {
+    display: none;
+}
+
+html[data-theme="light"] .msn-theme-icon-moon {
+    display: none;
+}
+
+html[data-theme="light"] .msn-theme-icon-sun {
+    display: block;
+}
+
+/* Language dropdown */
+.msn-language-button::after {
+    display: none;
+}
+
+.msn-language-menu {
+    min-width: 156px;
+    margin-top: 0.6rem !important;
+    padding: 0.4rem;
+    background: var(--msn-header-bg);
+    border: 1px solid var(--msn-header-border);
+    border-radius: 12px;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
+}
+
+.msn-language-option {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.55rem 0.7rem;
+    border-radius: 8px;
+    color: var(--msn-header-text);
+    background: transparent;
+    font-size: 0.88rem;
+}
+
+.msn-language-option:hover,
+.msn-language-option:focus {
+    color: var(--msn-header-inverse-text);
+    background: var(--msn-header-inverse-bg);
+}
+
+.msn-language-option.active,
+.msn-language-option.active:hover,
+.msn-language-option.active:focus {
+    color: var(--msn-header-text);
+    background: var(--msn-header-surface);
+}
+
+.msn-language-status {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.msn-language-option.active .msn-language-status {
+    background: var(--msn-accent);
+}
+
+/* Mobile menu trigger */
+.msn-menu-button {
+    width: 40px;
+    height: 40px;
+    padding: 0 10px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 4px;
+}
+
+.msn-menu-button span {
+    display: block;
+    height: 1px;
+    background: currentColor;
+}
+
+/* Mobile offcanvas */
+.msn-mobile-menu {
+    --bs-offcanvas-width: min(86vw, 360px);
+    background: var(--msn-header-bg);
+    color: var(--msn-header-text);
+    border-left: 1px solid var(--msn-header-border) !important;
+}
+
+.msn-mobile-menu .offcanvas-header {
+    min-height: 68px;
+    justify-content: flex-end;
+    padding: 1rem 1.1rem;
+}
+
+.msn-mobile-menu .offcanvas-body {
+    padding: 0.5rem 1.25rem 1.5rem;
+}
+
+.msn-close-button {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--msn-header-border);
+    border-radius: 10px;
+    background: transparent;
+    color: var(--msn-header-text);
+    transition:
+        background-color 160ms ease,
+        border-color 160ms ease,
+        color 160ms ease,
+        transform 160ms ease;
+}
+
+.msn-close-button span {
+    position: absolute;
+    left: 11px;
+    top: 19px;
+    width: 16px;
+    height: 1px;
+    background: currentColor;
+}
+
+.msn-close-button span:first-child {
+    transform: rotate(45deg);
+}
+
+.msn-close-button span:last-child {
+    transform: rotate(-45deg);
+}
+
+.msn-mobile-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.msn-mobile-link {
+    display: flex;
+    align-items: center;
+    min-height: 54px;
+    border-bottom: 1px solid var(--msn-header-border);
+    color: var(--msn-header-text);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.86;
+}
+
+.msn-mobile-link:hover,
+.msn-mobile-link:focus-visible,
+.msn-mobile-link.active {
+    color: var(--msn-header-text);
+    opacity: 1;
+}
+
+.msn-mobile-link.active {
+    color: var(--msn-accent);
+}
+
+.msn-mobile-contact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    margin-top: 1.25rem;
+    padding: 0 1rem;
+    border: 1px solid var(--msn-header-border);
+    border-radius: 10px;
+    background: transparent;
+    color: var(--msn-header-text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition:
+        background-color 160ms ease,
+        border-color 160ms ease,
+        color 160ms ease,
+        transform 160ms ease;
+}
+
+.msn-mobile-contact:hover,
+.msn-mobile-contact:focus-visible {
+    background: var(--msn-header-inverse-bg);
+    border-color: var(--msn-header-inverse-bg);
+    color: var(--msn-header-inverse-text);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 991.98px) {
+    :root {
+        --msn-header-height: 66px;
+    }
+
+    .msn-navbar > .container {
+        gap: 0.75rem;
+    }
+
+    .msn-brand-logo {
+        width: 112px;
+    }
+
+    .msn-header-actions {
+        gap: 0.4rem;
+    }
+
+    .msn-icon-button,
+    .msn-menu-button {
+        width: 38px;
+        height: 38px;
+        border-radius: 9px;
+    }
+}
+
+@media (max-width: 420px) {
+    .msn-brand-logo {
+        width: 96px;
+    }
+
+    .msn-header-actions {
+        gap: 0.32rem;
+    }
+
+    .msn-icon-button,
+    .msn-menu-button {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .msn-nav-link,
+    .msn-icon-button,
+    .msn-menu-button,
+    .msn-contact-button,
+    .msn-mobile-contact,
+    .msn-close-button {
+        transition: none;
+    }
+}
+
+
+/* =========================================================
+   v1.3 — Resource Localization / RTL hardening
+   ========================================================= */
+
+/* Beat legacy/scoped ASP.NET anchor rules on Mobile as well. */
+.msn-mobile-menu a.msn-mobile-link,
+.msn-mobile-menu a.msn-mobile-link:visited {
+    color: var(--msn-header-text);
+}
+
+.msn-mobile-menu a.msn-mobile-link:hover,
+.msn-mobile-menu a.msn-mobile-link:focus-visible {
+    color: var(--msn-header-text);
+}
+
+.msn-mobile-menu a.msn-mobile-link.active,
+.msn-mobile-menu a.msn-mobile-link.active:visited {
+    color: var(--msn-accent);
+}
+
+.msn-mobile-menu a.msn-mobile-contact,
+.msn-mobile-menu a.msn-mobile-contact:visited {
+    color: var(--msn-header-text);
+}
+
+.msn-mobile-menu a.msn-mobile-contact:hover,
+.msn-mobile-menu a.msn-mobile-contact:focus-visible {
+    color: var(--msn-header-inverse-text);
+}
+
+/* RTL */
+html[dir="rtl"] .msn-mobile-menu {
+    border-left: 0 !important;
+    border-right: 1px solid var(--msn-header-border) !important;
+}
+
+html[dir="rtl"] .msn-mobile-link {
+    text-align: right;
+    justify-content: flex-start;
+}
+
+html[dir="rtl"] .msn-mobile-contact {
+    text-align: center;
+}
+
+html[dir="rtl"] .msn-language-menu {
+    text-align: right;
+}
+
+html[dir="rtl"] .msn-desktop-nav {
+    direction: rtl;
+}
+
+/* Language dropdown - remove default link blue */
+
+.msn-language-menu a.msn-language-option,
+.msn-language-menu a.msn-language-option:visited {
+    color: var(--msn-header-text) !important;
+}
+
+    .msn-language-menu a.msn-language-option:hover,
+    .msn-language-menu a.msn-language-option:focus {
+        color: var(--msn-header-inverse-text) !important;
+        background: var(--msn-header-text) !important;
+    }
+
+    .msn-language-menu a.msn-language-option.active {
+        color: var(--msn-header-text) !important;
+    }

@@ -1,22 +1,1323 @@
-html {
-  font-size: 14px;
+:root {
+    --msn-accent: #3b82f6;
+    --msn-bg: #0d0f11;
+    --msn-surface: #15181b;
+    --msn-surface-soft: #111417;
+    --msn-text: #f4f5f6;
+    --msn-muted: #a7adb5;
+    --msn-border: #2b3035;
+    --msn-grid-line: rgba(255, 255, 255, .012);
+    --msn-texture-dot: rgba(255, 255, 255, .022);
+    --msn-inverse-bg: #f5f5f5;
+    --msn-inverse-text: #0b0b0c;
+    --msn-header-height: 76px;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+html[data-theme="light"] {
+    --msn-bg: #f5f6f7;
+    --msn-surface: #ffffff;
+    --msn-surface-soft: #f0f2f4;
+    --msn-text: #15171a;
+    --msn-muted: #666c74;
+    --msn-border: #d9dde2;
+    --msn-grid-line: rgba(20, 24, 28, .025);
+    --msn-texture-dot: rgba(20, 24, 28, .035);
+    --msn-inverse-bg: #111111;
+    --msn-inverse-text: #ffffff;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+html,
+body {
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin: 0;
+    background-color: var(--msn-bg);
+    background-image:
+        radial-gradient(
+            circle at 12% 16%,
+            color-mix(in srgb, var(--msn-accent) 4.5%, transparent) 0,
+            transparent 420px
+        ),
+        radial-gradient(
+            circle at 86% 78%,
+            color-mix(in srgb, var(--msn-accent) 3%, transparent) 0,
+            transparent 360px
+        ),
+        linear-gradient(var(--msn-grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--msn-grid-line) 1px, transparent 1px),
+        radial-gradient(circle, var(--msn-texture-dot) .65px, transparent .75px);
+    background-size:
+        auto,
+        auto,
+        64px 64px,
+        64px 64px,
+        16px 16px;
+    background-position:
+        center,
+        center,
+        0 0,
+        0 0,
+        0 0;
+    background-attachment: fixed;
+    color: var(--msn-text);
+}
+
+.msn-header {
+    z-index: 1030;
+    background: var(--msn-bg);
+    border-bottom: 1px solid var(--msn-border);
+}
+
+.msn-header .navbar,
+.msn-header .container {
+    min-height: var(--msn-header-height);
+}
+
+.msn-brand {
+    display: inline-flex;
+    flex-shrink: 0;
+}
+
+.msn-brand-logo {
+    width: 128px;
+    height: auto;
+}
+
+.msn-logo-light,
+html[data-theme="light"] .msn-logo-dark {
+    display: none;
+}
+
+html[data-theme="light"] .msn-logo-light {
+    display: block;
+}
+
+.msn-nav-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 42px;
+    padding: .6rem .72rem;
+    color: var(--msn-text);
+    text-decoration: none;
+    font-size: .91rem;
+    font-weight: 500;
+    opacity: .86;
+    transition: opacity 160ms ease;
+}
+
+.msn-nav-link:hover,
+.msn-nav-link:focus-visible,
+.msn-nav-link.active {
+    color: var(--msn-text);
+    opacity: 1;
+}
+
+.msn-nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 4px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--msn-accent);
+    transform: translateX(-50%);
+}
+
+.msn-control {
+    min-width: 40px;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid var(--msn-border);
+    border-radius: 10px;
+    background: transparent;
+    color: var(--msn-text);
+    text-decoration: none;
+    box-shadow: none !important;
+    transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.msn-control:hover,
+.msn-control:focus-visible {
+    background: var(--msn-inverse-bg);
+    border-color: var(--msn-inverse-bg);
+    color: var(--msn-inverse-text);
+    transform: translateY(-1px);
+}
+
+.msn-icon {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.msn-sun,
+html[data-theme="light"] .msn-moon {
+    display: none;
+}
+
+html[data-theme="light"] .msn-sun {
+    display: block;
+}
+
+.msn-control.dropdown-toggle::after {
+    display: none;
+}
+
+.msn-language-menu {
+    min-width: 156px;
+    margin-top: .6rem !important;
+    padding: .4rem;
+    background: var(--msn-bg);
+    border: 1px solid var(--msn-border);
+    border-radius: 12px;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, .16);
+}
+
+.msn-language-option {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .55rem .7rem;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--msn-text);
+    font-size: .88rem;
+}
+
+.msn-language-option:hover,
+.msn-language-option:focus {
+    background: var(--msn-inverse-bg);
+    color: var(--msn-inverse-text);
+}
+
+.msn-language-option.active,
+.msn-language-option.active:hover,
+.msn-language-option.active:focus {
+    background: var(--msn-surface);
+    color: var(--msn-text);
+}
+
+.msn-language-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.msn-language-option.active .msn-language-dot {
+    background: var(--msn-accent);
+}
+
+.msn-menu-button {
+    flex-direction: column;
+    gap: 4px;
+    padding-inline: 10px;
+}
+
+.msn-menu-button span {
+    width: 18px;
+    height: 1px;
+    background: currentColor;
+}
+
+.msn-mobile-menu {
+    --bs-offcanvas-width: min(86vw, 360px);
+    background: var(--msn-bg);
+    color: var(--msn-text);
+    border-color: var(--msn-border) !important;
+}
+
+.msn-close {
+    filter: var(--msn-close-filter, invert(1));
+    opacity: 1;
+}
+
+html[data-theme="light"] {
+    --msn-close-filter: none;
+}
+
+.msn-mobile-link {
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+    padding-inline: 0;
+    border-bottom: 1px solid var(--msn-border);
+    color: var(--msn-text);
+    font-weight: 500;
+    opacity: .86;
+}
+
+.msn-mobile-link:hover,
+.msn-mobile-link:focus-visible {
+    color: var(--msn-text);
+    opacity: 1;
+}
+
+.msn-mobile-link.active,
+.msn-mobile-link.active:hover {
+    color: var(--msn-accent);
+    opacity: 1;
+}
+
+html[dir="rtl"] .msn-language-menu,
+html[dir="rtl"] .msn-mobile-link {
+    text-align: right;
+}
+
+@media (max-width: 991.98px) {
+    :root {
+        --msn-header-height: 66px;
+    }
+
+    .msn-brand-logo {
+        width: 112px;
+    }
+}
+
+@media (max-width: 420px) {
+    .msn-brand-logo {
+        width: 96px;
+    }
+
+    .msn-control {
+        min-width: 36px;
+        min-height: 36px;
+        border-radius: 9px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+/* =========================================================
+   HOME — HERO
+   ========================================================= */
+
+.msn-hero-section {
+    min-height: calc(100svh - var(--msn-header-height));
+    display: flex;
+    align-items: center;
+    padding-block: 2rem 3.5rem;
+}
+
+.msn-hero-copy {
+    max-width: 640px;
+}
+
+.msn-hero-kicker {
+    color: var(--msn-accent);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.msn-hero-title {
+    color: var(--msn-text);
+    font-size: clamp(2.2rem, 4vw, 3.8rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -.035em;
+    margin: 0;
+}
+
+.msn-hero-role {
+    color: var(--msn-text);
+    font-size: clamp(1.02rem, 2.3vw, 1.28rem);
+    font-weight: 500;
+    opacity: .92;
+}
+
+.msn-hero-description {
+    color: var(--msn-muted);
+    font-size: 1rem;
+    line-height: 1.9;
+    max-width: 36rem;
+    margin: 0;
+}
+
+.msn-hero-btn {
+    min-height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 1.2rem;
+    border-radius: 10px;
+    font-size: .95rem;
+    font-weight: 600;
+    transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.msn-hero-btn-primary {
+    background: var(--msn-text);
+    border: 1px solid var(--msn-text);
+    color: var(--msn-inverse-text);
+}
+
+.msn-hero-btn-secondary {
+    background: transparent;
+    border: 1px solid var(--msn-border);
+    color: var(--msn-text);
+}
+
+.msn-hero-btn:hover,
+.msn-hero-btn:focus-visible {
+    background: var(--msn-inverse-bg);
+    border-color: var(--msn-inverse-bg);
+    color: var(--msn-inverse-text);
+    transform: translateY(-1px);
+}
+
+.msn-hero-brand-panel {
+    width: min(100%, 300px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+}
+
+.msn-hero-circle-logo {
+    display: block;
+    width: min(100%, 230px);
+    height: auto;
+}
+
+.msn-hero-circle-logo-light,
+html[data-theme="light"] .msn-hero-circle-logo-dark {
+    display: none;
+}
+
+html[data-theme="light"] .msn-hero-circle-logo-light {
+    display: block;
+}
+
+html[dir="rtl"] .msn-hero-copy {
+    text-align: right;
+}
+
+@media (min-width: 992px) {
+    html[dir="rtl"] .msn-hero-copy {
+        max-width: 680px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .msn-hero-section {
+        min-height: auto;
+        padding-block: 1.6rem 3rem;
+    }
+
+    .msn-hero-brand-panel {
+        min-height: 340px;
+        padding: 1.75rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .msn-hero-section {
+        padding-block: 1.25rem 2.5rem;
+    }
+
+    .msn-hero-brand-panel {
+        width: min(100%, 300px);
+    }
+
+    .msn-hero-circle-logo {
+        width: min(100%, 170px);
+    }
+
+    .msn-hero-description {
+        font-size: .96rem;
+        line-height: 1.85;
+    }
+
+    .msn-hero-btn {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   GLOBAL — FOOTER
+   ========================================================= */
+
+.msn-footer {
+    position: relative;
+    padding-block: 3rem 1.35rem;
+    background: var(--msn-bg);
+    border-top: 1px solid var(--msn-border);
+}
+
+.msn-footer::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    inset-inline-start: 50%;
+    width: 84px;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--msn-accent);
+    transform: translateX(-50%);
+    opacity: .8;
+}
+
+.msn-footer-brand-block {
+    max-width: 34rem;
+}
+
+.msn-footer-brand .msn-brand-logo {
+    width: 118px;
+}
+
+.msn-footer-accent {
+    display: block;
+    width: 28px;
+    height: 2px;
+    margin-block: 1rem .9rem;
+    border-radius: 999px;
+    background: var(--msn-accent);
+}
+
+.msn-footer-tagline {
+    max-width: 31rem;
+    color: var(--msn-muted);
+    font-size: .88rem;
+    line-height: 1.8;
+}
+
+.msn-footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .45rem .95rem;
+    align-items: center;
+}
+
+.msn-footer-nav a {
+    position: relative;
+    padding-block: .25rem;
+    color: var(--msn-muted);
+    font-size: .83rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 160ms ease;
+}
+
+.msn-footer-nav a::after {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: var(--msn-accent);
+    transition: width 160ms ease;
+}
+
+.msn-footer-nav a:hover,
+.msn-footer-nav a:focus-visible {
+    color: var(--msn-text);
+}
+
+.msn-footer-nav a:hover::after,
+.msn-footer-nav a:focus-visible::after {
+    width: 100%;
+}
+
+.msn-footer-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .9rem;
+}
+
+html[dir="rtl"] .msn-footer-actions {
+    align-items: flex-end;
+}
+
+.msn-footer-contact {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    padding-inline: .85rem;
+    border: 1px solid var(--msn-border);
+    border-radius: 12px;
+    background: transparent;
+    color: var(--msn-text);
+    font-size: .82rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 160ms ease, border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+
+.msn-footer-contact:hover,
+.msn-footer-contact:focus-visible {
+    color: var(--msn-text);
+    border-color: var(--msn-accent);
+    background: color-mix(in srgb, var(--msn-accent) 6%, transparent);
+    transform: translateY(-1px);
+}
+
+html[dir="rtl"] .msn-footer-contact svg {
+    transform: scaleX(-1);
+}
+
+.msn-footer-socials {
+    display: flex;
+    align-items: center;
+    gap: .45rem;
+}
+
+.msn-footer-social {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--msn-border);
+    border-radius: 10px;
+    background: transparent;
+    color: var(--msn-text);
+    text-decoration: none;
+    font-size: .76rem;
+    transition: transform 160ms ease, border-color 160ms ease, color 160ms ease, background-color 160ms ease;
+}
+
+.msn-footer-social:hover,
+.msn-footer-social:focus-visible {
+    color: var(--msn-accent);
+    border-color: color-mix(in srgb, var(--msn-accent) 48%, var(--msn-border));
+    background: color-mix(in srgb, var(--msn-accent) 6%, transparent);
+    transform: translateY(-2px);
+}
+
+.msn-footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2.2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--msn-border);
+    color: var(--msn-muted);
+    font-size: .75rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 767.98px) {
+    .msn-footer {
+        padding-block: 2.4rem 1.2rem;
+    }
+
+    .msn-footer-actions,
+    html[dir="rtl"] .msn-footer-actions {
+        align-items: flex-start;
+    }
+
+    html[dir="rtl"] .msn-footer-actions {
+        align-items: flex-end;
+    }
+
+    .msn-footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .35rem;
+        margin-top: 1.6rem;
+    }
+
+    html[dir="rtl"] .msn-footer-bottom {
+        align-items: flex-end;
+    }
+}
+
+
+
+/* ===== Header/Footer icon refinement ===== */
+
+.msn-main-nav-links {
+    gap: .45rem !important;
+}
+
+.msn-nav-link,
+.msn-footer-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: .42rem;
+}
+
+html[dir="rtl"] .msn-nav-link,
+html[dir="rtl"] .msn-footer-nav a {
+    flex-direction: row-reverse;
+}
+
+.msn-nav-link-icon,
+.msn-footer-link-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .82;
+    transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.msn-nav-link:hover .msn-nav-link-icon,
+.msn-nav-link:focus-visible .msn-nav-link-icon,
+.msn-nav-link.active .msn-nav-link-icon,
+.msn-footer-nav a:hover .msn-footer-link-icon,
+.msn-footer-nav a:focus-visible .msn-footer-link-icon {
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+.msn-footer-brand-block {
+    width: 100%;
+}
+
+.msn-footer-accent {
+    width: 100%;
+    max-width: 220px;
+    height: 1px;
+    margin-block: 1rem .95rem;
+    opacity: .95;
+}
+
+
+/* =========================================================
+   GLOBAL — HEADER / FOOTER v3
+   ========================================================= */
+
+.msn-main-nav-links {
+    gap: .2rem !important;
+}
+
+.msn-nav-link {
+    gap: .42rem;
+    border-radius: 10px;
+    padding-inline: .62rem;
+    transition:
+        color 160ms ease,
+        opacity 160ms ease,
+        background-color 160ms ease,
+        transform 160ms ease;
+}
+
+.msn-nav-link-icon,
+.msn-mobile-link-icon,
+.msn-footer-link-icon,
+.msn-header-contact-icon,
+.msn-footer-contact-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.msn-nav-link-icon svg,
+.msn-mobile-link-icon svg,
+.msn-footer-link-icon svg,
+.msn-header-contact-icon svg,
+.msn-footer-contact-icon svg {
+    width: 15px;
+    height: 15px;
+}
+
+.msn-nav-link-icon {
+    color: var(--msn-muted);
+    opacity: .9;
+    transition: color 160ms ease, transform 160ms ease;
+}
+
+.msn-nav-link:hover,
+.msn-nav-link:focus-visible {
+    color: var(--msn-text);
+    background: color-mix(in srgb, var(--msn-accent) 6%, transparent);
+    transform: translateY(-1px);
+}
+
+.msn-nav-link:hover .msn-nav-link-icon,
+.msn-nav-link:focus-visible .msn-nav-link-icon,
+.msn-nav-link.active .msn-nav-link-icon {
+    color: var(--msn-accent);
+    transform: translateY(-1px);
+}
+
+.msn-header-contact-icon {
+    color: var(--msn-muted);
+}
+
+.msn-control:hover .msn-header-contact-icon,
+.msn-control:focus-visible .msn-header-contact-icon {
+    color: inherit;
+}
+
+.msn-mobile-link {
+    display: flex !important;
+    align-items: center;
+    gap: .65rem;
+}
+
+.msn-mobile-link-icon {
+    color: var(--msn-muted);
+}
+
+.msn-mobile-link:hover .msn-mobile-link-icon,
+.msn-mobile-link.active .msn-mobile-link-icon {
+    color: var(--msn-accent);
+}
+
+.msn-mobile-contact {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer layout */
+.msn-footer {
+    padding-block: 2.6rem 1.2rem;
+}
+
+.msn-footer-top {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(320px, 1fr) auto;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.msn-footer-brand-panel {
+    min-width: 0;
+}
+
+.msn-footer-brand .msn-brand-logo {
+    width: 120px;
+}
+
+.msn-footer-accent {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 1px;
+    margin-block: 1rem .95rem;
+    background: linear-gradient(
+        90deg,
+        var(--msn-accent) 0%,
+        color-mix(in srgb, var(--msn-accent) 42%, transparent) 72%,
+        transparent 100%
+    );
+    box-shadow: 0 0 12px color-mix(in srgb, var(--msn-accent) 12%, transparent);
+}
+
+html[dir="rtl"] .msn-footer-accent {
+    background: linear-gradient(
+        270deg,
+        var(--msn-accent) 0%,
+        color-mix(in srgb, var(--msn-accent) 42%, transparent) 72%,
+        transparent 100%
+    );
+}
+
+.msn-footer-tagline {
+    max-width: 33rem;
+}
+
+.msn-footer-menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .5rem .75rem;
+}
+
+.msn-footer-menu-link {
+    min-width: 0;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    padding: .45rem .55rem;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: var(--msn-muted);
+    font-size: .8rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+        color 160ms ease,
+        border-color 160ms ease,
+        background-color 160ms ease,
+        transform 160ms ease;
+}
+
+.msn-footer-menu-link:hover,
+.msn-footer-menu-link:focus-visible {
+    color: var(--msn-text);
+    border-color: color-mix(in srgb, var(--msn-accent) 18%, var(--msn-border));
+    background: color-mix(in srgb, var(--msn-accent) 5%, transparent);
+    transform: translateY(-1px);
+}
+
+.msn-footer-link-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    color: var(--msn-muted);
+    background: color-mix(in srgb, var(--msn-accent) 4%, transparent);
+    transition: color 160ms ease, background-color 160ms ease;
+}
+
+.msn-footer-menu-link:hover .msn-footer-link-icon,
+.msn-footer-menu-link:focus-visible .msn-footer-link-icon {
+    color: var(--msn-accent);
+    background: color-mix(in srgb, var(--msn-accent) 10%, transparent);
+}
+
+.msn-footer-actions {
+    min-width: 170px;
+    align-items: stretch;
+}
+
+.msn-footer-contact {
+    gap: .55rem;
+}
+
+.msn-footer-contact-icon {
+    color: var(--msn-accent);
+}
+
+.msn-footer-socials {
+    justify-content: flex-start;
+}
+
+html[dir="rtl"] .msn-footer-socials {
+    justify-content: flex-end;
+}
+
+.msn-footer-bottom {
+    margin-top: 1.8rem;
+    padding-top: .9rem;
+}
+
+/* =========================================================
+   HOME — HERO / SPLIT LAYOUT — FULL HEIGHT
+   ========================================================= */
+
+.msn-hero-section {
+    min-height: calc(100vh - var(--msn-header-height));
+    display: flex;
+    align-items: center;
+    padding-block: 2rem;
+    background: var(--msn-bg);
+}
+
+.msn-hero-section > .container {
+    width: 100%;
+}
+
+.msn-hero-split {
+    width: 100%;
+    padding-block: 1.25rem;
+}
+
+.msn-hero-copy {
+    max-width: 620px;
+}
+
+.msn-hero-status-dot {
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--msn-accent);
+    box-shadow: 0 0 10px color-mix(in srgb, var(--msn-accent) 42%, transparent);
+}
+
+.msn-hero-kicker {
+    color: var(--msn-accent);
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+}
+
+.msn-hero-title {
+    color: var(--msn-text);
+    font-size: clamp(2.15rem, 3.1vw, 3.2rem);
+    font-weight: 760;
+    line-height: 1.2;
+    letter-spacing: -.025em;
+}
+
+html[dir="rtl"] .msn-hero-title {
+    line-height: 1.34;
+    letter-spacing: 0;
+}
+
+.msn-hero-role {
+    color: var(--msn-text);
+    font-size: .98rem;
+    font-weight: 650;
+    line-height: 1.7;
+}
+
+.msn-hero-description {
+    max-width: 610px;
+    color: var(--msn-muted);
+    font-size: .91rem;
+    line-height: 1.85;
+}
+
+.msn-hero-action {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: .55rem .84rem;
+    border-radius: 11px;
+    font-size: .82rem;
+    font-weight: 700;
+    transition: transform 160ms ease, border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+
+.msn-hero-action:hover,
+.msn-hero-action:focus-visible {
+    transform: translateY(-2px);
+}
+
+.msn-hero-action-primary {
+    color: var(--msn-inverse-text);
+    background: var(--msn-inverse-bg);
+    border: 1px solid var(--msn-inverse-bg);
+}
+
+.msn-hero-action-primary:hover,
+.msn-hero-action-primary:focus-visible {
+    color: var(--msn-inverse-text);
+    border-color: var(--msn-accent);
+}
+
+.msn-hero-action-secondary {
+    color: var(--msn-text);
+    background: transparent;
+    border: 1px solid var(--msn-border);
+}
+
+.msn-hero-action-secondary:hover,
+.msn-hero-action-secondary:focus-visible {
+    color: var(--msn-text);
+    border-color: color-mix(in srgb, var(--msn-accent) 42%, var(--msn-border));
+    background: color-mix(in srgb, var(--msn-accent) 5%, transparent);
+}
+
+html[dir="rtl"] .msn-hero-action-primary svg {
+    transform: scaleX(-1);
+}
+
+.msn-hero-socials {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.msn-hero-social {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--msn-border);
+    border-radius: 9px;
+    background: transparent;
+    color: var(--msn-muted);
+    text-decoration: none;
+    font-size: .72rem;
+    transition: transform 160ms ease, color 160ms ease, border-color 160ms ease, background-color 160ms ease;
+}
+
+.msn-hero-social:hover,
+.msn-hero-social:focus-visible {
+    color: var(--msn-accent);
+    border-color: color-mix(in srgb, var(--msn-accent) 46%, var(--msn-border));
+    background: color-mix(in srgb, var(--msn-accent) 6%, transparent);
+    transform: translateY(-2px);
+}
+
+.msn-hero-visual {
+    min-height: 420px;
+    display: grid;
+    grid-template-columns: minmax(135px, 1fr) minmax(200px, 250px) minmax(135px, 1fr);
+    gap: 1.05rem;
+    align-items: center;
+}
+
+.msn-hero-feature-stack {
+    display: flex;
+    flex-direction: column;
+    gap: .72rem;
+}
+
+.msn-hero-feature-stack-start {
+    align-items: flex-end;
+}
+
+.msn-hero-feature-stack-end {
+    align-items: flex-start;
+}
+
+.msn-hero-feature {
+    width: min(100%, 170px);
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    padding: .6rem .68rem;
+    border: 1px solid var(--msn-border);
+    border-radius: 12px;
+    background: var(--msn-surface);
+    color: var(--msn-muted);
+    font-size: .72rem;
+    font-weight: 650;
+    line-height: 1.4;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .12);
+    transition: transform 180ms ease, border-color 180ms ease, color 180ms ease, background-color 180ms ease;
+}
+
+.msn-hero-feature:hover {
+    transform: translateY(-3px);
+    color: var(--msn-text);
+    border-color: color-mix(in srgb, var(--msn-accent) 34%, var(--msn-border));
+    background: color-mix(in srgb, var(--msn-accent) 4%, var(--msn-surface));
+}
+
+.msn-hero-feature-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: var(--msn-accent);
+    background: color-mix(in srgb, var(--msn-accent) 8%, transparent);
+}
+
+.msn-hero-feature-icon svg {
+    width: 15px;
+    height: 15px;
+}
+
+.msn-hero-logo-stage {
+    position: relative;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.msn-hero-logo-stage::before,
+.msn-hero-logo-stage::after,
+.msn-hero-shape {
+    pointer-events: none;
+}
+
+.msn-hero-logo-stage::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border: 1px solid color-mix(in srgb, var(--msn-accent) 12%, var(--msn-border));
+    border-radius: 30px;
+    transform: rotate(45deg);
+    opacity: .46;
+}
+
+.msn-hero-logo-stage::after {
+    content: "";
+    position: absolute;
+    width: 188px;
+    height: 188px;
+    border: 1px solid color-mix(in srgb, var(--msn-accent) 17%, var(--msn-border));
+    border-radius: 24px;
+    transform: rotate(17deg);
+    opacity: .3;
+}
+
+.msn-hero-circle-logo {
+    position: relative;
+    z-index: 3;
+    width: min(100%, 198px);
+    height: auto;
+}
+
+.msn-hero-shape {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    border: 1px solid color-mix(in srgb, var(--msn-accent) 9%, var(--msn-border));
+    border-radius: 24px;
+    opacity: .25;
+}
+
+.msn-hero-shape-one {
+    width: 240px;
+    height: 158px;
+    transform: rotate(-12deg);
+}
+
+.msn-hero-shape-two {
+    width: 230px;
+    height: 148px;
+    transform: rotate(10deg);
+}
+
+@media (max-width: 991.98px) {
+    .msn-hero-section {
+        min-height: auto;
+        padding-block: 2rem;
+    }
+
+    .msn-hero-split {
+        padding-block: .5rem;
+    }
+
+    .msn-hero-visual {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .msn-hero-logo-stage {
+        min-height: 235px;
+        order: 1;
+    }
+
+    .msn-hero-feature-stack {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: .6rem;
+        align-items: stretch;
+    }
+
+    .msn-hero-feature-stack-start {
+        order: 2;
+    }
+
+    .msn-hero-feature-stack-end {
+        order: 3;
+    }
+
+    .msn-hero-feature {
+        width: 100%;
+        min-height: 52px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .msn-hero-section {
+        padding-block: 1.5rem;
+    }
+
+    .msn-hero-feature-stack {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .msn-hero-feature {
+        padding: .55rem;
+        font-size: .69rem;
+    }
+
+    .msn-hero-logo-stage::before {
+        width: 180px;
+        height: 180px;
+    }
+
+    .msn-hero-logo-stage::after {
+        width: 154px;
+        height: 154px;
+    }
+
+    .msn-hero-circle-logo {
+        width: 165px;
+    }
+}
+
+
+/* =========================================================
+   GLOBAL — BACKGROUND THEME / TEXTURE
+   ========================================================= */
+
+main {
+    position: relative;
+    background: transparent;
+}
+
+.msn-header {
+    background: color-mix(in srgb, var(--msn-bg) 94%, transparent);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.msn-footer {
+    background: color-mix(in srgb, var(--msn-bg) 95%, transparent);
+}
+
+.msn-hero-section {
+    background: transparent;
+}
+
+.msn-project-card,
+.msn-service-card,
+.msn-article-card,
+.msn-hero-feature {
+    background: color-mix(in srgb, var(--msn-surface) 96%, var(--msn-bg));
+}
+
+html[data-theme="light"] .msn-header,
+html[data-theme="light"] .msn-footer {
+    background: color-mix(in srgb, var(--msn-bg) 92%, transparent);
+}
+
+html[data-theme="light"] body {
+    background-image:
+        radial-gradient(
+            circle at 12% 16%,
+            color-mix(in srgb, var(--msn-accent) 3%, transparent) 0,
+            transparent 420px
+        ),
+        radial-gradient(
+            circle at 86% 78%,
+            color-mix(in srgb, var(--msn-accent) 2%, transparent) 0,
+            transparent 360px
+        ),
+        linear-gradient(var(--msn-grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--msn-grid-line) 1px, transparent 1px),
+        radial-gradient(circle, var(--msn-texture-dot) .65px, transparent .75px);
+}
+
+@media (max-width: 767.98px) {
+    body {
+        background-attachment: scroll;
+        background-size:
+            auto,
+            auto,
+            72px 72px,
+            72px 72px,
+            18px 18px;
+    }
 }

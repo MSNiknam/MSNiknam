@@ -1,8 +1,1283 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+@{
+    ViewData["Title"] = Localizer["Page_Home_Title"];
+
+    var projects = new[]
+    {
+        new
+        {
+            Id = "ziggurat",
+            Name = Localizer["SelectedProject_Name"].Value,
+            Type = Localizer["SelectedProject_Type"].Value,
+            Lead = Localizer["SelectedProject_Lead"].Value,
+            Subtitle = Localizer["SelectedProject_Subtitle"].Value,
+            Description = Localizer["SelectedProject_Description"].Value,
+            IsLive = true,
+            Url = "https://ziggurat.sepehrafagh.ir"
+        },
+        new
+        {
+            Id = "nexa-commerce",
+            Name = "Nexa Commerce",
+            Type = Localizer["Project02_Type"].Value,
+            Lead = Localizer["Project02_Lead"].Value,
+            Subtitle = Localizer["Project02_Subtitle"].Value,
+            Description = Localizer["Project02_Description"].Value,
+            IsLive = false,
+            Url = string.Empty
+        },
+        new
+        {
+            Id = "atlas-crm",
+            Name = "Atlas CRM",
+            Type = Localizer["Project03_Type"].Value,
+            Lead = Localizer["Project03_Lead"].Value,
+            Subtitle = Localizer["Project03_Subtitle"].Value,
+            Description = Localizer["Project03_Description"].Value,
+            IsLive = false,
+            Url = string.Empty
+        },
+        new
+        {
+            Id = "aurora-studio",
+            Name = "Aurora Studio",
+            Type = Localizer["Project04_Type"].Value,
+            Lead = Localizer["Project04_Lead"].Value,
+            Subtitle = Localizer["Project04_Subtitle"].Value,
+            Description = Localizer["Project04_Description"].Value,
+            IsLive = false,
+            Url = string.Empty
+        },
+        new
+        {
+            Id = "meridian-erp",
+            Name = "Meridian ERP",
+            Type = Localizer["Project05_Type"].Value,
+            Lead = Localizer["Project05_Lead"].Value,
+            Subtitle = Localizer["Project05_Subtitle"].Value,
+            Description = Localizer["Project05_Description"].Value,
+            IsLive = false,
+            Url = string.Empty
+        },
+        new
+        {
+            Id = "luma-academy",
+            Name = "Luma Academy",
+            Type = Localizer["Project06_Type"].Value,
+            Lead = Localizer["Project06_Lead"].Value,
+            Subtitle = Localizer["Project06_Subtitle"].Value,
+            Description = Localizer["Project06_Description"].Value,
+            IsLive = false,
+            Url = string.Empty
+        }
+    };
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section class="msn-hero-section">
+    <div class="container">
+        <div class="msn-hero-split">
+            <div class="row align-items-center g-4 g-xl-5">
+                <div class="col-12 col-lg-5 order-2 order-lg-1">
+                    <div class="msn-hero-copy">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span class="msn-hero-status-dot" aria-hidden="true"></span>
+                            <p class="msn-hero-kicker mb-0">@Localizer["Hero_Kicker"]</p>
+                        </div>
+
+                        <h1 class="msn-hero-title mb-2">
+                            @Localizer["Hero_Title"]
+                        </h1>
+
+                        <p class="msn-hero-role mb-3">
+                            @Localizer["Hero_Role"]
+                        </p>
+
+                        <p class="msn-hero-description mb-4">
+                            @Localizer["Hero_Description"]
+                        </p>
+
+                        <div class="d-flex flex-wrap align-items-center gap-2">
+                            <a class="btn msn-hero-action msn-hero-action-primary"
+                               href="#"
+                               data-preview-link>
+                                <span>@Localizer["Hero_PrimaryAction"]</span>
+                                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                                    <path d="M7 12h10M13 6l6 6-6 6"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-width="2"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+
+                            <a class="btn msn-hero-action msn-hero-action-secondary"
+                               href="#"
+                               data-preview-link>
+                                @Localizer["Hero_SecondaryAction"]
+                            </a>
+                        </div>
+
+                        <div class="msn-hero-socials mt-3">
+                            <a class="msn-hero-social"
+                               href="https://github.com/MSNiknam"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               aria-label="GitHub"
+                               title="GitHub">
+                                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                                    <path fill="currentColor" d="M12 .8A11.2 11.2 0 0 0 8.5 22.6c.56.1.77-.24.77-.54v-2.1c-3.12.68-3.78-1.32-3.78-1.32-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.49-.28-5.11-1.25-5.11-5.55 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.08 1.15A10.7 10.7 0 0 1 12 6.1c.95 0 1.9.13 2.79.38 2.13-1.44 3.07-1.15 3.07-1.15.62 1.55.23 2.7.12 2.98.72.79 1.15 1.8 1.15 3.02 0 4.31-2.62 5.26-5.12 5.54.4.35.76 1.03.76 2.07v3.08c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z"/>
+                                </svg>
+                            </a>
+
+                            <a class="msn-hero-social"
+                               href="https://www.linkedin.com/in/mohammadsaleh-niknam-08b859259/"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               aria-label="LinkedIn"
+                               title="LinkedIn">
+                                <span class="fw-bold" aria-hidden="true">in</span>
+                            </a>
+
+                            <a class="msn-hero-social"
+                               href="https://www.instagram.com/MSNiknam/"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               aria-label="Instagram"
+                               title="Instagram">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                                    <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
+                                    <circle cx="12" cy="12" r="4"></circle>
+                                    <circle cx="17.4" cy="6.7" r="1" fill="currentColor" stroke="none"></circle>
+                                </svg>
+                            </a>
+
+                            <a class="msn-hero-social"
+                               href="https://t.me/MSNiknam"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               aria-label="Telegram"
+                               title="Telegram">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M21 4 3.8 10.6c-.8.3-.8 1.4.1 1.6l4.4 1.3 1.7 5c.3.8 1.3 1 1.8.3l2.5-3.1 4.1 3c.6.4 1.4.1 1.5-.7L22 5.2c.2-.9-.3-1.5-1-1.2Z"></path>
+                                    <path d="m8.3 13.5 8.9-5.9"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-7 order-1 order-lg-2">
+                    <div class="msn-hero-visual">
+                        <div class="msn-hero-feature-stack msn-hero-feature-stack-start">
+                            <div class="msn-hero-feature">
+                                <span class="msn-hero-feature-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24">
+                                        <rect x="4" y="5" width="16" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                                        <path d="M4 9h16M8 15h3M13 15h3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                    </svg>
+                                </span>
+                                <span>@Localizer["Hero_Feature_WebApps"]</span>
+                            </div>
+
+                            <div class="msn-hero-feature">
+                                <span class="msn-hero-feature-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="m9 7-4 5 4 5M15 7l4 5-4 5M14 4l-4 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <span>@Localizer["Hero_Feature_CleanArchitecture"]</span>
+                            </div>
+
+                            <div class="msn-hero-feature">
+                                <span class="msn-hero-feature-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M4 17h3l2-5 3 3 3-8 2 10h3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <span>@Localizer["Hero_Feature_Performance"]</span>
+                            </div>
+                        </div>
+
+                        <div class="msn-hero-logo-stage">
+                            <span class="msn-hero-shape msn-hero-shape-one" aria-hidden="true"></span>
+                            <span class="msn-hero-shape msn-hero-shape-two" aria-hidden="true"></span>
+
+                            <img class="msn-hero-circle-logo msn-hero-circle-logo-dark"
+                                 src="~/assets/brand/msn-circle-white.png"
+                                 alt="@Localizer["Hero_LogoAlt"]"
+                                 width="240"
+                                 height="240" />
+
+                            <img class="msn-hero-circle-logo msn-hero-circle-logo-light"
+                                 src="~/assets/brand/msn-circle-black.png"
+                                 alt="@Localizer["Hero_LogoAlt"]"
+                                 width="240"
+                                 height="240" />
+                        </div>
+
+                        <div class="msn-hero-feature-stack msn-hero-feature-stack-end">
+                            <div class="msn-hero-feature">
+                                <span class="msn-hero-feature-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                                        <path d="M12 5v3M12 16v3M5 12h3M16 12h3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                    </svg>
+                                </span>
+                                <span>@Localizer["Hero_Feature_ModernTech"]</span>
+                            </div>
+
+                            <div class="msn-hero-feature">
+                                <span class="msn-hero-feature-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <span>@Localizer["Hero_Feature_Scalable"]</span>
+                            </div>
+
+                            <div class="msn-hero-feature">
+                                <span class="msn-hero-feature-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24">
+                                        <circle cx="12" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                                        <path d="M6 19c1.5-3 3.5-4.5 6-4.5s4.5 1.5 6 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                    </svg>
+                                </span>
+                                <span>@Localizer["Hero_Feature_UX"]</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-4 py-lg-5" aria-labelledby="selected-project-title">
+    <div class="container">
+        <div class="d-flex align-items-end justify-content-between gap-3 mb-4 mb-lg-5">
+            <div>
+                <p class="msn-hero-kicker mb-2">@Localizer["SelectedProject_Kicker"]</p>
+                <h2 class="msn-section-title mb-0" id="selected-project-title">
+                    @Localizer["SelectedProject_SectionTitle"]
+                </h2>
+            </div>
+
+            <a class="btn msn-projects-cta d-none d-sm-inline-flex align-items-center justify-content-center"
+               href="#"
+               data-preview-link>
+                <span>@Localizer["SelectedProject_ViewAll"]</span>
+                <span class="msn-projects-cta-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18">
+                        <path d="M7 12h10M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </span>
+            </a>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 align-items-start" id="projectsAccordion">
+            @foreach (var project in projects)
+            {
+                var detailsId = $"{project.Id}-project-details";
+
+                <div class="col">
+                    <article class="msn-project-card overflow-hidden">
+                        <div class="msn-project-preview position-relative">
+                            <img src="~/assets/projects/ziggurat-placeholder.svg"
+                                 alt="@Localizer["Projects_PreviewAlt", project.Name]"
+                                 class="w-100 d-block"
+                                 loading="lazy" />
+
+                            <div class="msn-project-live-badge">
+                                <span class="@(project.IsLive ? "msn-project-live-dot" : "msn-project-demo-dot")"
+                                      aria-hidden="true"></span>
+                                <span>
+                                    @(project.IsLive ? Localizer["SelectedProject_Live"] : Localizer["Projects_Demo"])
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="p-3">
+                            <div class="d-flex align-items-start justify-content-between gap-3">
+                                <div class="min-w-0">
+                                    <p class="msn-project-label mb-2">@project.Lead</p>
+                                    <h3 class="msn-project-title mb-2">@project.Name</h3>
+                                    <p class="msn-project-subtitle mb-0">@project.Subtitle</p>
+                                </div>
+
+                                <button class="btn msn-project-toggle rounded-circle d-inline-flex align-items-center justify-content-center flex-shrink-0"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#@detailsId"
+                                        aria-expanded="false"
+                                        aria-controls="@detailsId"
+                                        aria-label="@Localizer["Projects_ToggleLabel", project.Name]">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                                        <path d="M6 9l6 6 6-6"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="2.2"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="collapse" id="@detailsId" data-bs-parent="#projectsAccordion">
+                            <div class="border-top border-secondary border-opacity-25 p-3">
+                                <p class="msn-hero-description mb-4">
+                                    @project.Description
+                                </p>
+
+                                <div class="d-flex flex-wrap gap-2 mb-4"
+                                     aria-label="@Localizer["SelectedProject_TechnologiesLabel"]">
+                                    <span class="msn-project-tech">ASP.NET Core</span>
+                                    <span class="msn-project-tech">EF Core</span>
+                                    <span class="msn-project-tech">SQL Server</span>
+                                    <span class="msn-project-tech">Bootstrap</span>
+                                    <span class="msn-project-tech">JavaScript</span>
+                                </div>
+
+                                @if (project.IsLive)
+                                {
+                                    <a class="btn msn-project-action w-100"
+                                       href="@project.Url"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        @Localizer["SelectedProject_ViewProject"]
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a class="btn msn-project-action w-100"
+                                       href="#"
+                                       data-preview-link>
+                                        @Localizer["Projects_DemoButton"]
+                                    </a>
+                                }
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            }
+        </div>
+
+        <div class="d-sm-none mt-4">
+            <a class="btn msn-projects-cta w-100 d-inline-flex align-items-center justify-content-center"
+               href="#"
+               data-preview-link>
+                <span>@Localizer["SelectedProject_ViewAll"]</span>
+                <span class="msn-projects-cta-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18">
+                        <path d="M7 12h10M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </span>
+            </a>
+        </div>
+
+        <div class="msn-section-divider-wrap" aria-hidden="true">
+            <span class="msn-section-divider"></span>
+        </div>
+    </div>
+</section>
+
+
+<section class="msn-services-section py-4 py-lg-5" aria-labelledby="services-preview-title">
+    <div class="container">
+        <div class="row align-items-end g-3 mb-4 mb-lg-5">
+            <div class="col-12 col-lg-8">
+                <p class="msn-hero-kicker mb-2">@Localizer["ServicesPreview_Kicker"]</p>
+                <h2 class="msn-section-title msn-services-heading mb-3" id="services-preview-title">
+                    @Localizer["ServicesPreview_Title"]
+                </h2>
+                <p class="msn-services-intro mb-0">
+                    @Localizer["ServicesPreview_Description"]
+                </p>
+            </div>
+
+            <div class="col-12 col-lg-4 d-lg-flex justify-content-lg-end">
+                <a class="btn msn-projects-cta d-inline-flex align-items-center justify-content-center"
+                   href="#"
+                   data-preview-link>
+                    <span>@Localizer["ServicesPreview_ViewAll"]</span>
+                    <span class="msn-projects-cta-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="18" height="18">
+                            <path d="M7 12h10M13 6l6 6-6 6"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="2.1"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <div class="row g-3">
+            <div class="col-12 col-md-6">
+                <article class="msn-service-card h-100">
+                    <div class="d-flex align-items-start justify-content-between gap-3 mb-3">
+                        <div class="msn-service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.8"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <span class="msn-service-number">01</span>
+                    </div>
+
+                    <h3 class="msn-service-title">@Localizer["Service01_Title"]</h3>
+                    <p class="msn-service-description">@Localizer["Service01_Description"]</p>
+
+                    <div class="d-flex flex-wrap gap-2 mt-auto">
+                        <span class="msn-service-tag">ASP.NET Core</span>
+                        <span class="msn-service-tag">MVC</span>
+                        <span class="msn-service-tag">JavaScript</span>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <article class="msn-service-card h-100">
+                    <div class="d-flex align-items-start justify-content-between gap-3 mb-3">
+                        <div class="msn-service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path d="M4 7h16M7 4v6M17 4v6M5 12h6v7H5zM14 12h5v3h-5zM14 18h5"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.8"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <span class="msn-service-number">02</span>
+                    </div>
+
+                    <h3 class="msn-service-title">@Localizer["Service02_Title"]</h3>
+                    <p class="msn-service-description">@Localizer["Service02_Description"]</p>
+
+                    <div class="d-flex flex-wrap gap-2 mt-auto">
+                        <span class="msn-service-tag">REST API</span>
+                        <span class="msn-service-tag">Architecture</span>
+                        <span class="msn-service-tag">Security</span>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <article class="msn-service-card h-100">
+                    <div class="d-flex align-items-start justify-content-between gap-3 mb-3">
+                        <div class="msn-service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <ellipse cx="12" cy="5" rx="7" ry="3"
+                                         fill="none"
+                                         stroke="currentColor"
+                                         stroke-width="1.8"></ellipse>
+                                <path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.8"
+                                      stroke-linecap="round"></path>
+                            </svg>
+                        </div>
+                        <span class="msn-service-number">03</span>
+                    </div>
+
+                    <h3 class="msn-service-title">@Localizer["Service03_Title"]</h3>
+                    <p class="msn-service-description">@Localizer["Service03_Description"]</p>
+
+                    <div class="d-flex flex-wrap gap-2 mt-auto">
+                        <span class="msn-service-tag">SQL Server</span>
+                        <span class="msn-service-tag">EF Core</span>
+                        <span class="msn-service-tag">Data Modeling</span>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <article class="msn-service-card h-100">
+                    <div class="d-flex align-items-start justify-content-between gap-3 mb-3">
+                        <div class="msn-service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path d="M12 3v12M8 7l4-4 4 4M5 13v5a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-5"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.8"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <span class="msn-service-number">04</span>
+                    </div>
+
+                    <h3 class="msn-service-title">@Localizer["Service04_Title"]</h3>
+                    <p class="msn-service-description">@Localizer["Service04_Description"]</p>
+
+                    <div class="d-flex flex-wrap gap-2 mt-auto">
+                        <span class="msn-service-tag">IIS</span>
+                        <span class="msn-service-tag">Windows Server</span>
+                        <span class="msn-service-tag">Deployment</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="msn-section-divider-wrap" aria-hidden="true">
+            <span class="msn-section-divider"></span>
+        </div>
+    </div>
+</section>
+
+
+<section class="msn-about-preview py-4 py-lg-5" aria-labelledby="about-preview-title">
+    <div class="container">
+        <div class="row g-4 g-lg-5 align-items-center">
+            <div class="col-12 col-lg-7">
+                <p class="msn-hero-kicker mb-2">@Localizer["AboutPreview_Kicker"]</p>
+
+                <h2 class="msn-section-title msn-about-heading mb-3" id="about-preview-title">
+                    @Localizer["AboutPreview_Title"]
+                </h2>
+
+                <p class="msn-about-description mb-4">
+                    @Localizer["AboutPreview_Description"]
+                </p>
+
+                <a class="btn msn-projects-cta d-inline-flex align-items-center justify-content-center"
+                   href="#"
+                   data-preview-link>
+                    <span>@Localizer["AboutPreview_Action"]</span>
+                    <span class="msn-projects-cta-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="18" height="18">
+                            <path d="M7 12h10M13 6l6 6-6 6"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="2.1"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <div class="col-12 col-lg-5">
+                <div class="msn-about-facts">
+                    <div class="msn-about-fact">
+                        <span class="msn-about-fact-label">@Localizer["AboutPreview_FocusLabel"]</span>
+                        <strong class="msn-about-fact-value">@Localizer["AboutPreview_FocusValue"]</strong>
+                    </div>
+
+                    <div class="msn-about-fact">
+                        <span class="msn-about-fact-label">@Localizer["AboutPreview_StackLabel"]</span>
+                        <strong class="msn-about-fact-value">@Localizer["AboutPreview_StackValue"]</strong>
+                    </div>
+
+                    <div class="msn-about-fact">
+                        <span class="msn-about-fact-label">@Localizer["AboutPreview_ApproachLabel"]</span>
+                        <strong class="msn-about-fact-value">@Localizer["AboutPreview_ApproachValue"]</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="msn-section-divider-wrap" aria-hidden="true">
+            <span class="msn-section-divider"></span>
+        </div>
+    </div>
+</section>
+
+
+<section class="msn-articles-section py-4 py-lg-5" aria-labelledby="latest-articles-title">
+    <div class="container">
+        <div class="d-flex flex-column flex-lg-row align-items-lg-end justify-content-between gap-3 mb-4">
+            <div>
+                <p class="msn-hero-kicker mb-2">@Localizer["ArticlesPreview_Kicker"]</p>
+                <h2 class="msn-section-title msn-articles-heading mb-2" id="latest-articles-title">
+                    @Localizer["ArticlesPreview_Title"]
+                </h2>
+                <p class="msn-articles-intro mb-0">
+                    @Localizer["ArticlesPreview_Description"]
+                </p>
+            </div>
+
+            <a class="btn msn-projects-cta d-inline-flex align-items-center justify-content-center align-self-start align-self-lg-auto"
+               href="#"
+               data-preview-link>
+                <span>@Localizer["ArticlesPreview_ViewAll"]</span>
+                <span class="msn-projects-cta-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18">
+                        <path d="M7 12h10M13 6l6 6-6 6"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2.1"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"></path>
+                    </svg>
+                </span>
+            </a>
+        </div>
+
+        <div class="row g-3">
+            <div class="col-12 col-lg-4">
+                <article class="msn-article-card h-100">
+                    <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
+                        <span class="msn-article-category">@Localizer["Article01_Category"]</span>
+                        <span class="msn-article-index">01</span>
+                    </div>
+
+                    <h3 class="msn-article-title">@Localizer["Article01_Title"]</h3>
+                    <p class="msn-article-description">@Localizer["Article01_Description"]</p>
+
+                    <a class="msn-article-link mt-auto"
+                       href="#"
+                       data-preview-link>
+                        <span>@Localizer["ArticlesPreview_Read"]</span>
+                        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                            <path d="M7 12h10M13 6l6 6-6 6"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                </article>
+            </div>
+
+            <div class="col-12 col-lg-4">
+                <article class="msn-article-card h-100">
+                    <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
+                        <span class="msn-article-category">@Localizer["Article02_Category"]</span>
+                        <span class="msn-article-index">02</span>
+                    </div>
+
+                    <h3 class="msn-article-title">@Localizer["Article02_Title"]</h3>
+                    <p class="msn-article-description">@Localizer["Article02_Description"]</p>
+
+                    <a class="msn-article-link mt-auto"
+                       href="#"
+                       data-preview-link>
+                        <span>@Localizer["ArticlesPreview_Read"]</span>
+                        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                            <path d="M7 12h10M13 6l6 6-6 6"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                </article>
+            </div>
+
+            <div class="col-12 col-lg-4">
+                <article class="msn-article-card h-100">
+                    <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
+                        <span class="msn-article-category">@Localizer["Article03_Category"]</span>
+                        <span class="msn-article-index">03</span>
+                    </div>
+
+                    <h3 class="msn-article-title">@Localizer["Article03_Title"]</h3>
+                    <p class="msn-article-description">@Localizer["Article03_Description"]</p>
+
+                    <a class="msn-article-link mt-auto"
+                       href="#"
+                       data-preview-link>
+                        <span>@Localizer["ArticlesPreview_Read"]</span>
+                        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                            <path d="M7 12h10M13 6l6 6-6 6"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                </article>
+            </div>
+        </div>
+
+        <div class="msn-section-divider-wrap" aria-hidden="true">
+            <span class="msn-section-divider"></span>
+        </div>
+    </div>
+</section>
+
+
+<section class="msn-contact-cta py-4 py-lg-5" aria-labelledby="contact-cta-title">
+    <div class="container">
+        <div class="msn-contact-cta-inner">
+            <div class="row g-4 align-items-center">
+                <div class="col-12 col-lg-8">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <span class="msn-contact-status-dot" aria-hidden="true"></span>
+                        <p class="msn-hero-kicker mb-0">@Localizer["ContactCTA_Kicker"]</p>
+                    </div>
+
+                    <h2 class="msn-section-title msn-contact-cta-title mb-2" id="contact-cta-title">
+                        @Localizer["ContactCTA_Title"]
+                    </h2>
+
+                    <p class="msn-contact-cta-description mb-0">
+                        @Localizer["ContactCTA_Description"]
+                    </p>
+                </div>
+
+                <div class="col-12 col-lg-4 d-lg-flex justify-content-lg-end">
+                    <a class="btn msn-contact-cta-button d-inline-flex align-items-center justify-content-center"
+                       href="#"
+                       data-preview-link>
+                        <span>@Localizer["ContactCTA_Action"]</span>
+
+                        <span class="msn-contact-cta-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="18" height="18">
+                                <path d="M7 12h10M13 6l6 6-6 6"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="2"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .msn-project-card {
+        background: var(--msn-surface);
+        border: 1px solid rgba(255,255,255,.10);
+        border-radius: 20px;
+        box-shadow: 0 10px 28px rgba(255,255,255,.035);
+        transform: translateZ(0);
+        transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+
+    .msn-project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 16px 38px rgba(255,255,255,.07);
+        border-color: color-mix(in srgb, var(--msn-accent) 26%, rgba(255,255,255,.10));
+    }
+
+    .msn-project-preview {
+        aspect-ratio: 16 / 8.3;
+        overflow: hidden;
+        background: #10131a;
+        border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .msn-project-preview img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform .3s ease;
+    }
+
+    .msn-project-card:hover .msn-project-preview img {
+        transform: scale(1.018);
+    }
+
+    .msn-project-live-badge {
+        position: absolute;
+        top: 10px;
+        inset-inline-start: 10px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 5px 9px;
+        border-radius: 999px;
+        background: rgba(9,9,9,.78);
+        border: 1px solid rgba(255,255,255,.13);
+        color: #f5f5f5;
+        font-size: .68rem;
+        font-weight: 700;
+        backdrop-filter: blur(8px);
+    }
+
+    .msn-project-live-dot,
+    .msn-project-demo-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+    }
+
+    .msn-project-live-dot {
+        background: #22c55e;
+        box-shadow: 0 0 10px rgba(34,197,94,.65);
+    }
+
+    .msn-project-demo-dot {
+        background: var(--msn-accent);
+        box-shadow: 0 0 9px color-mix(in srgb, var(--msn-accent) 52%, transparent);
+    }
+
+    .msn-project-label {
+        color: var(--msn-accent);
+        font-size: .68rem;
+        letter-spacing: .08em;
+        font-weight: 700;
+        margin-bottom: .4rem !important;
+    }
+
+    .msn-project-title {
+        color: var(--msn-text);
+        font-size: clamp(1.35rem, 1.8vw, 1.7rem);
+        font-weight: 750;
+        line-height: 1.15;
+        letter-spacing: -.025em;
+        margin: 0;
+    }
+
+    .msn-project-subtitle {
+        color: var(--msn-muted);
+        font-size: .88rem;
+        line-height: 1.65;
+        max-width: 34ch;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .msn-project-toggle {
+        width: 40px;
+        height: 40px;
+        color: var(--msn-text);
+        border: 1px solid var(--msn-border);
+        background: transparent;
+        box-shadow: none;
+        transition: transform .18s ease, border-color .18s ease, color .18s ease, background-color .18s ease;
+    }
+
+    .msn-project-toggle:hover {
+        color: var(--msn-accent);
+        border-color: color-mix(in srgb, var(--msn-accent) 45%, var(--msn-border));
+        background: color-mix(in srgb, var(--msn-accent) 7%, transparent);
+        transform: translateY(-1px);
+    }
+
+    .msn-project-toggle[aria-expanded="true"] svg {
+        transform: rotate(180deg);
+    }
+
+    .msn-project-toggle svg {
+        width: 17px;
+        height: 17px;
+        transition: transform .2s ease;
+    }
+
+    .msn-project-tech,
+    .msn-service-tag {
+        display: inline-flex;
+        align-items: center;
+        min-height: 29px;
+        padding: .3rem .62rem;
+        border-radius: 999px;
+        border: 1px solid var(--msn-border);
+        color: var(--msn-text);
+        font-size: .7rem;
+        background: transparent;
+    }
+
+    .msn-project-action {
+        min-height: 42px;
+        padding: .6rem .9rem;
+        border-radius: 12px;
+        border: 1px solid var(--msn-border);
+        background: transparent;
+        color: var(--msn-text);
+        font-weight: 700;
+        font-size: .88rem;
+        transition: color .18s ease, background-color .18s ease, border-color .18s ease;
+    }
+
+    .msn-project-action:hover {
+        color: var(--msn-inverse-text);
+        background: var(--msn-inverse-bg);
+        border-color: var(--msn-inverse-bg);
+    }
+
+    .msn-projects-cta {
+        min-height: 46px;
+        padding: .62rem .85rem;
+        border-radius: 14px;
+        border: 1px solid var(--msn-border);
+        background: transparent;
+        color: var(--msn-text);
+        gap: .65rem;
+        font-size: .88rem;
+        font-weight: 700;
+        box-shadow: none;
+        transition: transform .18s ease, border-color .18s ease, color .18s ease, background-color .18s ease;
+    }
+
+    .msn-projects-cta:hover {
+        transform: translateY(-2px);
+        color: var(--msn-text);
+        border-color: color-mix(in srgb, var(--msn-accent) 42%, var(--msn-border));
+        background: color-mix(in srgb, var(--msn-accent) 5%, transparent);
+    }
+
+    .msn-projects-cta-icon {
+        width: 30px;
+        height: 30px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        background: color-mix(in srgb, var(--msn-accent) 10%, transparent);
+        color: var(--msn-accent);
+        flex-shrink: 0;
+        transition: transform .18s ease;
+    }
+
+    html[dir="rtl"] .msn-projects-cta-icon svg {
+        transform: scaleX(-1);
+    }
+
+    html[dir="rtl"] .msn-projects-cta:hover .msn-projects-cta-icon {
+        transform: translateX(-2px);
+    }
+
+    html[dir="ltr"] .msn-projects-cta:hover .msn-projects-cta-icon {
+        transform: translateX(2px);
+    }
+
+    .msn-section-divider-wrap {
+        padding-top: 1.7rem;
+    }
+
+    .msn-section-divider {
+        display: block;
+        width: min(100%, 760px);
+        height: 1px;
+        margin: 0 auto;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            color-mix(in srgb, var(--msn-accent) 48%, transparent),
+            transparent
+        );
+        box-shadow: 0 0 12px color-mix(in srgb, var(--msn-accent) 14%, transparent);
+    }
+
+    .msn-section-title {
+        color: var(--msn-text);
+        font-size: clamp(1.55rem, 2vw, 2.05rem);
+        font-weight: 720;
+        line-height: 1.42;
+        letter-spacing: -.018em;
+        max-width: none;
+        text-wrap: balance;
+    }
+
+    html[dir="rtl"] .msn-section-title {
+        letter-spacing: 0;
+        line-height: 1.55;
+    }
+
+    .msn-services-heading {
+        margin-inline: 0;
+    }
+
+    .msn-services-intro {
+        max-width: 720px;
+        color: var(--msn-muted);
+        font-size: .95rem;
+        line-height: 1.8;
+    }
+
+    .msn-service-card {
+        min-height: 235px;
+        display: flex;
+        flex-direction: column;
+        padding: 1.2rem;
+        border: 1px solid var(--msn-border);
+        border-radius: 18px;
+        background: var(--msn-surface);
+        box-shadow: 0 8px 24px rgba(255,255,255,.025);
+        transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+
+    .msn-service-card:hover {
+        transform: translateY(-4px);
+        border-color: color-mix(in srgb, var(--msn-accent) 28%, var(--msn-border));
+        box-shadow: 0 13px 30px rgba(255,255,255,.05);
+    }
+
+    .msn-service-icon {
+        width: 42px;
+        height: 42px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        color: var(--msn-accent);
+        background: color-mix(in srgb, var(--msn-accent) 7%, transparent);
+        border: 1px solid color-mix(in srgb, var(--msn-accent) 15%, var(--msn-border));
+    }
+
+    .msn-service-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .msn-service-number {
+        color: var(--msn-muted);
+        font-size: .7rem;
+        font-weight: 700;
+        letter-spacing: .1em;
+    }
+
+    .msn-service-title {
+        color: var(--msn-text);
+        font-size: clamp(1.2rem, 1.65vw, 1.5rem);
+        font-weight: 740;
+        line-height: 1.3;
+        margin: 0 0 .65rem;
+    }
+
+    .msn-service-description {
+        color: var(--msn-muted);
+        font-size: .9rem;
+        line-height: 1.75;
+        margin: 0 0 1rem;
+    }
+
+
+    .msn-about-heading {
+        max-width: 30ch;
+    }
+
+    .msn-about-description {
+        max-width: 720px;
+        color: var(--msn-muted);
+        font-size: .96rem;
+        line-height: 1.9;
+    }
+
+    .msn-about-facts {
+        border-top: 1px solid var(--msn-border);
+    }
+
+    .msn-about-fact {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1.5rem;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--msn-border);
+    }
+
+    .msn-about-fact-label {
+        color: var(--msn-muted);
+        font-size: .78rem;
+        font-weight: 600;
+        flex-shrink: 0;
+    }
+
+    .msn-about-fact-value {
+        color: var(--msn-text);
+        font-size: .92rem;
+        font-weight: 700;
+        text-align: end;
+        line-height: 1.6;
+    }
+
+
+    .msn-articles-heading {
+        max-width: 32ch;
+    }
+
+    .msn-articles-intro {
+        max-width: 680px;
+        color: var(--msn-muted);
+        font-size: .92rem;
+        line-height: 1.8;
+    }
+
+    .msn-article-card {
+        min-height: 250px;
+        display: flex;
+        flex-direction: column;
+        padding: 1.15rem;
+        border: 1px solid var(--msn-border);
+        border-radius: 18px;
+        background: var(--msn-surface);
+        transition: transform .2s ease, border-color .2s ease, background-color .2s ease;
+    }
+
+    .msn-article-card:hover {
+        transform: translateY(-4px);
+        border-color: color-mix(in srgb, var(--msn-accent) 28%, var(--msn-border));
+        background: color-mix(in srgb, var(--msn-accent) 2.5%, var(--msn-surface));
+    }
+
+    .msn-article-category {
+        color: var(--msn-accent);
+        font-size: .7rem;
+        font-weight: 700;
+    }
+
+    .msn-article-index {
+        color: var(--msn-muted);
+        font-size: .68rem;
+        font-weight: 700;
+        letter-spacing: .08em;
+    }
+
+    .msn-article-title {
+        color: var(--msn-text);
+        font-size: 1.2rem;
+        font-weight: 740;
+        line-height: 1.5;
+        margin: 0 0 .7rem;
+    }
+
+    .msn-article-description {
+        color: var(--msn-muted);
+        font-size: .87rem;
+        line-height: 1.75;
+        margin: 0 0 1.2rem;
+    }
+
+    .msn-article-link {
+        display: inline-flex;
+        align-items: center;
+        gap: .45rem;
+        width: fit-content;
+        color: var(--msn-text);
+        font-size: .8rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: color .18s ease, gap .18s ease;
+    }
+
+    .msn-article-link:hover {
+        color: var(--msn-accent);
+        gap: .65rem;
+    }
+
+    html[dir="rtl"] .msn-article-link svg {
+        transform: scaleX(-1);
+    }
+
+
+    .msn-contact-cta-inner {
+        padding: 1.5rem 0;
+        border-top: 1px solid var(--msn-border);
+        border-bottom: 1px solid var(--msn-border);
+    }
+
+    .msn-contact-status-dot {
+        width: 7px;
+        height: 7px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background: var(--msn-accent);
+        box-shadow: 0 0 12px color-mix(in srgb, var(--msn-accent) 48%, transparent);
+    }
+
+    .msn-contact-cta-title {
+        max-width: 30ch;
+    }
+
+    .msn-contact-cta-description {
+        max-width: 650px;
+        color: var(--msn-muted);
+        font-size: .92rem;
+        line-height: 1.8;
+    }
+
+    .msn-contact-cta-button {
+        min-height: 46px;
+        padding: .62rem .72rem .62rem 1rem;
+        gap: .75rem;
+        border: 1px solid var(--msn-border);
+        border-radius: 14px;
+        background: transparent;
+        color: var(--msn-text);
+        font-size: .88rem;
+        font-weight: 700;
+        transition: transform .18s ease, border-color .18s ease, background-color .18s ease, color .18s ease;
+    }
+
+    .msn-contact-cta-button:hover {
+        transform: translateY(-2px);
+        color: var(--msn-text);
+        border-color: color-mix(in srgb, var(--msn-accent) 42%, var(--msn-border));
+        background: color-mix(in srgb, var(--msn-accent) 5%, transparent);
+    }
+
+    .msn-contact-cta-icon {
+        width: 30px;
+        height: 30px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        color: var(--msn-accent);
+        background: color-mix(in srgb, var(--msn-accent) 10%, transparent);
+        transition: transform .18s ease;
+    }
+
+    html[dir="rtl"] .msn-contact-cta-icon svg {
+        transform: scaleX(-1);
+    }
+
+    html[dir="rtl"] .msn-contact-cta-button:hover .msn-contact-cta-icon {
+        transform: translateX(-2px);
+    }
+
+    html[dir="ltr"] .msn-contact-cta-button:hover .msn-contact-cta-icon {
+        transform: translateX(2px);
+    }
+
+    html[data-theme="light"] .msn-project-card,
+    html[data-theme="light"] .msn-service-card {
+        box-shadow: 0 8px 24px rgba(0,0,0,.045);
+    }
+
+    html[data-theme="light"] .msn-project-card:hover,
+    html[data-theme="light"] .msn-service-card:hover {
+        box-shadow: 0 12px 30px rgba(0,0,0,.075);
+    }
+
+    #projectsAccordion .col,
+    #projectsAccordion .msn-project-card {
+        transition: filter .22s ease, opacity .22s ease, transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+
+    #projectsAccordion:has(.collapse.show) .col:not(:has(.collapse.show)) .msn-project-card {
+        filter: blur(2.4px);
+        opacity: .34;
+        transform: scale(.985);
+    }
+
+    #projectsAccordion:has(.collapse.show) .col:has(.collapse.show) {
+        position: relative;
+        z-index: 4;
+    }
+
+    #projectsAccordion:has(.collapse.show) .col:has(.collapse.show) .msn-project-card {
+        transform: translateY(-3px) scale(1.008);
+        border-color: color-mix(in srgb, var(--msn-accent) 38%, var(--msn-border));
+        box-shadow:
+            0 18px 42px rgba(0,0,0,.30),
+            0 0 28px color-mix(in srgb, var(--msn-accent) 10%, transparent);
+    }
+
+    #projectsAccordion:has(.collapse.show) .col:has(.collapse.show) .msn-project-toggle {
+        color: var(--msn-accent);
+        border-color: color-mix(in srgb, var(--msn-accent) 42%, var(--msn-border));
+    }
+
+</style>

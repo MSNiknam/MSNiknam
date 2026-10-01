@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Nav_Home" xml:space="preserve">
+    <value>خانه</value>
+  </data>
+  <data name="Nav_About" xml:space="preserve">
+    <value>درباره من</value>
+  </data>
+  <data name="Nav_Resume" xml:space="preserve">
+    <value>رزومه</value>
+  </data>
+  <data name="Nav_Projects" xml:space="preserve">
+    <value>پروژه‌ها</value>
+  </data>
+  <data name="Nav_Services" xml:space="preserve">
+    <value>خدمات</value>
+  </data>
+  <data name="Nav_Blog" xml:space="preserve">
+    <value>مقالات</value>
+  </data>
+  <data name="Nav_Contact" xml:space="preserve">
+    <value>تماس</value>
+  </data>
+  <data name="Header_MainNavigation" xml:space="preserve">
+    <value>ناوبری اصلی</value>
+  </data>
+  <data name="Header_MobileNavigation" xml:space="preserve">
+    <value>ناوبری موبایل</value>
+  </data>
+  <data name="Header_Language" xml:space="preserve">
+    <value>انتخاب زبان</value>
+  </data>
+  <data name="Header_Theme" xml:space="preserve">
+    <value>تغییر پوسته</value>
+  </data>
+  <data name="Header_OpenMenu" xml:space="preserve">
+    <value>باز کردن منو</value>
+  </data>
+  <data name="Header_CloseMenu" xml:space="preserve">
+    <value>بستن منو</value>
+  </data>
+  <data name="Header_HomeLabel" xml:space="preserve">
+    <value>صفحه اصلی MSNiknam</value>
+  </data>
+  <data name="Language_English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Language_Persian" xml:space="preserve">
+    <value>فارسی</value>
+  </data>
+  <data name="Page_Home_Title" xml:space="preserve">
+    <value>خانه</value>
+  </data>
+  <data name="Hero_Kicker" xml:space="preserve">
+    <value>سلام، من</value>
+  </data>
+  <data name="Hero_Title" xml:space="preserve">
+    <value>محمدصالح نیکنام</value>
+  </data>
+  <data name="Hero_Role" xml:space="preserve">
+    <value>توسعه‌دهنده فول‌استک وب</value>
+  </data>
+  <data name="Hero_Description" xml:space="preserve">
+    <value>وب‌سایت‌ها و وب‌اپلیکیشن‌های مدرن، سریع و قابل نگهداری را با تمرکز بر کیفیت پیاده‌سازی و تجربه کاربری توسعه می‌دهم.</value>
+  </data>
+  <data name="Hero_PrimaryAction" xml:space="preserve">
+    <value>مشاهده پروژه‌ها</value>
+  </data>
+  <data name="Hero_SecondaryAction" xml:space="preserve">
+    <value>تماس با من</value>
+  </data>
+  <data name="Hero_LogoAlt" xml:space="preserve">
+    <value>لوگوی دایره‌ای MSNiknam</value>
+  </data>
+  <data name="SelectedProject_Kicker" xml:space="preserve">
+    <value>نمونه‌کارها</value>
+  </data>
+  <data name="SelectedProject_SectionTitle" xml:space="preserve">
+    <value>پروژه‌های منتخب</value>
+  </data>
+  <data name="SelectedProject_ViewAll" xml:space="preserve">
+    <value>مشاهده همه پروژه‌ها</value>
+  </data>
+  <data name="SelectedProject_Type" xml:space="preserve">
+    <value>وب‌سایت چندزبانه</value>
+  </data>
+  <data name="SelectedProject_Name" xml:space="preserve">
+    <value>Ziggurat</value>
+  </data>
+  <data name="SelectedProject_Description" xml:space="preserve">
+    <value>یک وب‌سایت چندزبانه مبتنی بر ASP.NET Core MVC با پنل مدیریت، مدیریت محتوای پروژه‌ها و محصولات، ترجمه‌های قابل ویرایش و پایگاه‌داده SQL Server.</value>
+  </data>
+  <data name="SelectedProject_TechnologiesLabel" xml:space="preserve">
+    <value>فناوری‌های استفاده‌شده در پروژه</value>
+  </data>
+  <data name="SelectedProject_ViewProject" xml:space="preserve">
+    <value>مشاهده پروژه</value>
+  </data>
+  <data name="SelectedProject_RoleLabel" xml:space="preserve">
+    <value>نقش</value>
+  </data>
+  <data name="SelectedProject_RoleValue" xml:space="preserve">
+    <value>توسعه فول‌استک</value>
+  </data>
+  <data name="SelectedProject_PlatformLabel" xml:space="preserve">
+    <value>پلتفرم</value>
+  </data>
+  <data name="SelectedProject_PlatformValue" xml:space="preserve">
+    <value>.NET 8 / MVC</value>
+  </data>
+  <data name="SelectedProject_LanguageLabel" xml:space="preserve">
+    <value>زبان‌ها</value>
+  </data>
+  <data name="SelectedProject_LanguageValue" xml:space="preserve">
+    <value>فارسی / انگلیسی</value>
+  </data>
+  <data name="SelectedProject_FocusLabel" xml:space="preserve">
+    <value>تمرکز</value>
+  </data>
+  <data name="SelectedProject_FocusValue" xml:space="preserve">
+    <value>مدیریت محتوا و بومی‌سازی</value>
+  </data>
+  <data name="SelectedProject_ToggleLabel" xml:space="preserve">
+    <value>نمایش جزئیات پروژه زیگورات</value>
+  </data>
+  <data name="SelectedProject_Live" xml:space="preserve">
+    <value>آنلاین</value>
+  </data>
+  <data name="SelectedProject_PreviewAlt" xml:space="preserve">
+    <value>پیش‌نمایش موقت وب‌سایت زیگورات</value>
+  </data>
+  <data name="SelectedProject_Lead" xml:space="preserve">
+    <value>پروژه آنلاین و در حال استفاده</value>
+  </data>
+  <data name="SelectedProject_Subtitle" xml:space="preserve">
+    <value>پلتفرم شرکتی چندزبانه با تمرکز بر مدیریت محتوا، ساختار تمیز و تجربه کاربری مناسب</value>
+  </data>
+  <data name="Projects_Demo" xml:space="preserve">
+    <value>نمونه</value>
+  </data>
+  <data name="Projects_DemoButton" xml:space="preserve">
+    <value>مشاهده نمونه</value>
+  </data>
+  <data name="Projects_PreviewAlt" xml:space="preserve">
+    <value>پیش‌نمایش موقت پروژه {0}</value>
+  </data>
+  <data name="Projects_ToggleLabel" xml:space="preserve">
+    <value>نمایش جزئیات پروژه {0}</value>
+  </data>
+  <data name="Project02_Type" xml:space="preserve">
+    <value>فروشگاه آنلاین</value>
+  </data>
+  <data name="Project02_Lead" xml:space="preserve">
+    <value>نمونه فروشگاه دیجیتال</value>
+  </data>
+  <data name="Project02_Subtitle" xml:space="preserve">
+    <value>تجربه خرید مینیمال با تمرکز بر سرعت، محصولات و مسیر ساده ثبت سفارش</value>
+  </data>
+  <data name="Project02_Description" xml:space="preserve">
+    <value>یک نمونه نمایشی برای فروشگاه آنلاین چندزبانه با ساختار محصول، دسته‌بندی، جست‌وجو و تجربه کاربری ساده و سریع.</value>
+  </data>
+  <data name="Project03_Type" xml:space="preserve">
+    <value>داشبورد مدیریتی</value>
+  </data>
+  <data name="Project03_Lead" xml:space="preserve">
+    <value>نمونه پنل کسب‌وکار</value>
+  </data>
+  <data name="Project03_Subtitle" xml:space="preserve">
+    <value>داشبورد متمرکز برای مدیریت مشتریان، فعالیت‌ها و گزارش‌های روزانه</value>
+  </data>
+  <data name="Project03_Description" xml:space="preserve">
+    <value>یک نمونه رابط مدیریتی برای نمایش داده‌های کسب‌وکار، مدیریت مشتریان، پیگیری فعالیت‌ها و ارائه گزارش‌های کاربردی.</value>
+  </data>
+  <data name="Project04_Type" xml:space="preserve">
+    <value>وب‌سایت استودیویی</value>
+  </data>
+  <data name="Project04_Lead" xml:space="preserve">
+    <value>نمونه وب‌سایت خلاق</value>
+  </data>
+  <data name="Project04_Subtitle" xml:space="preserve">
+    <value>یک تجربه بصری مینیمال برای معرفی خدمات، آثار و هویت یک استودیوی خلاق</value>
+  </data>
+  <data name="Project04_Description" xml:space="preserve">
+    <value>نمونه‌ای از یک وب‌سایت استودیویی با تمرکز بر ارائه پروژه‌ها، خدمات، هویت بصری و یک مسیر تماس واضح برای مخاطب.</value>
+  </data>
+  <data name="Project05_Type" xml:space="preserve">
+    <value>سامانه سازمانی</value>
+  </data>
+  <data name="Project05_Lead" xml:space="preserve">
+    <value>نمونه سیستم عملیاتی</value>
+  </data>
+  <data name="Project05_Subtitle" xml:space="preserve">
+    <value>ساختار ماژولار برای مدیریت فرآیندها، اطلاعات و عملیات داخلی مجموعه</value>
+  </data>
+  <data name="Project05_Description" xml:space="preserve">
+    <value>یک نمونه سامانه سازمانی برای مدیریت اطلاعات، گردش کار، گزارش‌ها و بخش‌های مختلف یک کسب‌وکار در یک محیط یکپارچه.</value>
+  </data>
+  <data name="Project06_Type" xml:space="preserve">
+    <value>پلتفرم آموزشی</value>
+  </data>
+  <data name="Project06_Lead" xml:space="preserve">
+    <value>نمونه تجربه یادگیری</value>
+  </data>
+  <data name="Project06_Subtitle" xml:space="preserve">
+    <value>پلتفرمی ساده و منظم برای دوره‌ها، محتوا، مسیر یادگیری و مدیریت دانشجو</value>
+  </data>
+  <data name="Project06_Description" xml:space="preserve">
+    <value>یک نمونه پلتفرم آموزشی برای مدیریت دوره‌ها، محتوا، کاربران و مسیر یادگیری با ساختار روشن و قابل توسعه.</value>
+  </data>
+  <data name="ServicesPreview_Kicker" xml:space="preserve">
+    <value>کاری که انجام می‌دهم</value>
+  </data>
+  <data name="ServicesPreview_Title" xml:space="preserve">
+    <value>از ساخت هسته فنی تا تحویل محصول وب</value>
+  </data>
+  <data name="ServicesPreview_Description" xml:space="preserve">
+    <value>روی توسعه وب به‌صورت کامل کار می‌کنم؛ از منطق سمت سرور و طراحی پایگاه‌داده تا پیاده‌سازی رابط و استقرار نهایی.</value>
+  </data>
+  <data name="ServicesPreview_ViewAll" xml:space="preserve">
+    <value>مشاهده همه خدمات</value>
+  </data>
+  <data name="Service01_Title" xml:space="preserve">
+    <value>توسعه فول‌استک وب</value>
+  </data>
+  <data name="Service01_Description" xml:space="preserve">
+    <value>پیاده‌سازی وب‌سایت و وب‌اپلیکیشن با ساختار تمیز، رابط واکنش‌گرا و هماهنگی کامل بین Frontend و Backend.</value>
+  </data>
+  <data name="Service02_Title" xml:space="preserve">
+    <value>Backend و API</value>
+  </data>
+  <data name="Service02_Description" xml:space="preserve">
+    <value>طراحی منطق سمت سرور با ASP.NET Core، ساخت API، معماری قابل نگهداری و توجه جدی به امنیت و پایداری.</value>
+  </data>
+  <data name="Service03_Title" xml:space="preserve">
+    <value>طراحی پایگاه‌داده</value>
+  </data>
+  <data name="Service03_Description" xml:space="preserve">
+    <value>طراحی مدل داده، ارتباط جداول و لایه دسترسی به داده با SQL Server و EF Core با تمرکز بر ساختار قابل توسعه.</value>
+  </data>
+  <data name="Service04_Title" xml:space="preserve">
+    <value>استقرار و راه‌اندازی</value>
+  </data>
+  <data name="Service04_Description" xml:space="preserve">
+    <value>آماده‌سازی و استقرار پروژه روی Windows Server و IIS، تنظیم محیط اجرا و تحویل نسخه قابل استفاده و پایدار.</value>
+  </data>
+  <data name="AboutPreview_Kicker" xml:space="preserve">
+    <value>درباره من</value>
+  </data>
+  <data name="AboutPreview_Title" xml:space="preserve">
+    <value>توسعه وب، دقیق و قابل اتکا</value>
+  </data>
+  <data name="AboutPreview_Description" xml:space="preserve">
+    <value>راهکارهای وب سریع، امن و قابل توسعه؛ از معماری و بک‌اند تا استقرار نهایی.</value>
+  </data>
+  <data name="AboutPreview_Action" xml:space="preserve">
+    <value>بیشتر درباره من</value>
+  </data>
+  <data name="AboutPreview_FocusLabel" xml:space="preserve">
+    <value>تمرکز</value>
+  </data>
+  <data name="AboutPreview_FocusValue" xml:space="preserve">
+    <value>توسعه وب و معماری سمت سرور</value>
+  </data>
+  <data name="AboutPreview_StackLabel" xml:space="preserve">
+    <value>فناوری اصلی</value>
+  </data>
+  <data name="AboutPreview_StackValue" xml:space="preserve">
+    <value>ASP.NET Core، EF Core و SQL Server</value>
+  </data>
+  <data name="AboutPreview_ApproachLabel" xml:space="preserve">
+    <value>رویکرد</value>
+  </data>
+  <data name="AboutPreview_ApproachValue" xml:space="preserve">
+    <value>ساختار تمیز، سادگی و قابلیت نگهداری</value>
+  </data>
+  <data name="ArticlesPreview_Kicker" xml:space="preserve">
+    <value>مقالات</value>
+  </data>
+  <data name="ArticlesPreview_Title" xml:space="preserve">
+    <value>یادداشت‌های فنی و تجربه‌های توسعه</value>
+  </data>
+  <data name="ArticlesPreview_Description" xml:space="preserve">
+    <value>مطالب کوتاه و کاربردی درباره توسعه وب، معماری و استقرار.</value>
+  </data>
+  <data name="ArticlesPreview_ViewAll" xml:space="preserve">
+    <value>مشاهده همه مقالات</value>
+  </data>
+  <data name="ArticlesPreview_Read" xml:space="preserve">
+    <value>مطالعه مقاله</value>
+  </data>
+  <data name="Article01_Category" xml:space="preserve">
+    <value>ASP.NET Core</value>
+  </data>
+  <data name="Article01_Title" xml:space="preserve">
+    <value>ساختار تمیز در پروژه‌های ASP.NET Core</value>
+  </data>
+  <data name="Article01_Description" xml:space="preserve">
+    <value>چطور ساختار پروژه را ساده، قابل نگهداری و آماده توسعه نگه داریم.</value>
+  </data>
+  <data name="Article02_Category" xml:space="preserve">
+    <value>Database</value>
+  </data>
+  <data name="Article02_Title" xml:space="preserve">
+    <value>طراحی دیتابیس برای پروژه‌های قابل توسعه</value>
+  </data>
+  <data name="Article02_Description" xml:space="preserve">
+    <value>چند اصل کاربردی برای مدل‌سازی داده و جلوگیری از پیچیدگی غیرضروری.</value>
+  </data>
+  <data name="Article03_Category" xml:space="preserve">
+    <value>Deployment</value>
+  </data>
+  <data name="Article03_Title" xml:space="preserve">
+    <value>استقرار ASP.NET Core روی IIS</value>
+  </data>
+  <data name="Article03_Description" xml:space="preserve">
+    <value>مروری کوتاه بر مسیر آماده‌سازی و انتشار پروژه روی Windows Server.</value>
+  </data>
+  <data name="ContactCTA_Kicker" xml:space="preserve">
+    <value>آماده همکاری</value>
+  </data>
+  <data name="ContactCTA_Title" xml:space="preserve">
+    <value>یک ایده دارید؟ بیایید اجرایش کنیم.</value>
+  </data>
+  <data name="ContactCTA_Description" xml:space="preserve">
+    <value>برای توسعه محصول، پیاده‌سازی پروژه جدید یا بهبود یک سیستم موجود در تماس باشید.</value>
+  </data>
+  <data name="ContactCTA_Action" xml:space="preserve">
+    <value>شروع گفتگو</value>
+  </data>
+  <data name="Footer_Tagline" xml:space="preserve">
+    <value>توسعه وب با تمرکز بر ساختار تمیز، عملکرد و پیاده‌سازی قابل اتکا.</value>
+  </data>
+  <data name="Footer_Navigation" xml:space="preserve">
+    <value>ناوبری پایین صفحه</value>
+  </data>
+  <data name="Footer_Privacy" xml:space="preserve">
+    <value>حریم خصوصی</value>
+  </data>
+  <data name="Footer_Rights" xml:space="preserve">
+    <value>تمامی حقوق محفوظ است.</value>
+  </data>
+  <data name="Footer_Credit" xml:space="preserve">
+    <value>طراحی و توسعه توسط محمدصالح نیکنام</value>
+  </data>
+  <data name="Hero_Feature_WebApps" xml:space="preserve">
+    <value>وب‌اپلیکیشن</value>
+  </data>
+  <data name="Hero_Feature_CleanArchitecture" xml:space="preserve">
+    <value>معماری تمیز</value>
+  </data>
+  <data name="Hero_Feature_Performance" xml:space="preserve">
+    <value>عملکرد</value>
+  </data>
+  <data name="Hero_Feature_ModernTech" xml:space="preserve">
+    <value>فناوری مدرن</value>
+  </data>
+  <data name="Hero_Feature_Scalable" xml:space="preserve">
+    <value>راهکار قابل توسعه</value>
+  </data>
+  <data name="Hero_Feature_UX" xml:space="preserve">
+    <value>تجربه کاربری</value>
+  </data>
+</root>
